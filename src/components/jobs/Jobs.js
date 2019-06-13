@@ -16,7 +16,7 @@ function Jobs({ jobs }) {
 }
 
 Jobs.propTypes = {
-  jobs: [PropTypes.object]
+  jobs: PropTypes.arrayOf(PropTypes.object).isRequired
 };
 
 export default Jobs;
