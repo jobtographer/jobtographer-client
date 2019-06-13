@@ -23,4 +23,18 @@ describe('job reducer', ()=>{
       jobsList: [{ title: 'title', company: 'company', jobUrl: 'url', location: 'location' }]
     });
   });
+
+  it('handles NEW_JOB_PENDING action', () => {
+    const initialState = {
+      loading: false,
+      jobsList: []
+    };
+    const newState = reducer(initialState, {
+      type: 'NEW_JOB_PENDING'
+    });
+    expect(newState).toEqual({
+      loading: true,
+      jobsList: []
+    });
+  });
 });
