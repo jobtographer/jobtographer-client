@@ -1,6 +1,14 @@
 import React from 'react';
+import Jobs from './jobs/Jobs';
 
 export default function App() {
-  return <h1>Hello World</h1>;
+  const jobs = [
+    { 
+      title: 'CEO',
+      company: 'Federal Reserve',
+      date: '06/13/2019',
+      status: true
+    }
+  ];
+  return <Jobs jobs={jobs} />;
 }
-  
