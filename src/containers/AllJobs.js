@@ -2,8 +2,10 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
-// import { getJobs } from '../actions/jobActions';
 import Jobs from '../components/jobs/Jobs';
+import { fetchJobs } from '../actions/jobsActions';
+import { getJobsSelector, getJobsLoadingSelector } from '../selectors/jobSelectors';
+
 
 class AllJobs extends PureComponent {
   static propTypes = {
@@ -26,7 +28,22 @@ class AllJobs extends PureComponent {
     const { loading, jobs } = this.props;
     if(loading) return <h1>loading...</h1>;
 
-    return <Jobs jobs={jobs} />
+    return <Jobs jobs={jobs} />;
   }
-
 }
+
+const mapStateToProps = state => ({
+  jobs: getJobsSelector(state),
+  loading: getJobsLoadingSelector(state)
+});
+
+const mapDispatchToProps = dispatch => ({
+  fetch() {
+    dispatch(fetchJobs());
+  }
+});
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(AllJobs);

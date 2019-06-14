@@ -4,7 +4,7 @@ const request = (method, body) => {
     headers: {
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify(body)
+    body: body ? JSON.stringify(body) : null
   })
     .then(res => ([res.ok, res.json()]))
     .then(([ok, json]) => {
