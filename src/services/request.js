@@ -15,3 +15,4 @@ const request = (method, body) => {
 };
 
 export const post = body => request('POST', body);
+export const get = () => request('GET');
