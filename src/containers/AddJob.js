@@ -12,14 +12,14 @@ class AddJob extends PureComponent {
     title: '',
     company: '',
     jobUrl: '',
-    location: ''
+    jobLocation: ''
   }
 
   handleSubmit = event => {
     event.preventDefault();
-    const { title, company, jobUrl } = this.state;
-    this.props.createJob({ title, company, jobUrl, location });
-    this.setState({ title: '', company: '', jobUrl: '', location: '' });
+    const { title, company, jobUrl, jobLocation } = this.state;
+    this.props.createJob({ title, company, jobUrl, jobLocation });
+    this.setState({ title: '', company: '', jobUrl: '', jobLocation: '' });
   }
 
   handleChange = ({ target }) => {
@@ -27,10 +27,10 @@ class AddJob extends PureComponent {
   }
 
   render() {
-    const { title, company, jobUrl, location } = this.state;
+    const { title, company, jobUrl, jobLocation } = this.state;
     return (
       <JobForm onSubmit={this.handleSubmit} onChange={this.handleChange} 
-        title={title} company={company} jobUrl={jobUrl} location={location} />
+        title={title} company={company} jobUrl={jobUrl} jobLocation={jobLocation} />
     );
   }
 }

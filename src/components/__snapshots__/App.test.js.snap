@@ -1,16 +1,3 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`App component renders App 1`] = `
-<Jobs
-  jobs={
-    Array [
-      Object {
-        "company": "Federal Reserve",
-        "date": "06/13/2019",
-        "status": true,
-        "title": "CEO",
-      },
-    ]
-  }
-/>
-`;
+exports[`App component renders App 1`] = `<Connect(AddJob) />`;

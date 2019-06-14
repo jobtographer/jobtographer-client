@@ -1,6 +1,3 @@
-export const createJob = job => {
-  return Promise.resolve({
-    _id: 'fake id',
-    ...job
-  });
-};
+import { post } from './request';
+
+export const createJob = job => post(job);
