@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import { newJob } from '../actions/jobsActions';
 import JobForm from '../components/jobs/jobForm';
 
 class AddJob extends PureComponent {
@@ -28,7 +29,7 @@ class AddJob extends PureComponent {
   render() {
     const { title, company, jobUrl, location } = this.state;
     return (
-      <JobForm onSubmit={this.onSubmit} onChange={this.onChange} 
+      <JobForm onSubmit={this.handleSubmit} onChange={this.handleChange} 
         title={title} company={company} jobUrl={jobUrl} location={location} />
     );
   }
