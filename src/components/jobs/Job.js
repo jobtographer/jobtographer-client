@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 
 function Job({ job }) {
   const { title, date, company, active } = job;
-  console.log(active);
   return (
     <>
       <h3>{title}</h3>

@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { newJob } from '../actions/jobsActions';
-import JobForm from '../components/jobs/jobForm';
+import JobForm from '../components/jobs/JobForm';
 
 class AddJob extends PureComponent {
   static propTypes = {

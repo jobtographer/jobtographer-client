@@ -5,7 +5,6 @@ import Jobs from '../components/jobs/Jobs';
 import { fetchJobs } from '../actions/jobsActions';
 import { getJobsSelector, getJobsLoadingSelector } from '../selectors/jobSelectors';
 
-
 class AllJobs extends PureComponent {
   static propTypes = {
     jobs: PropTypes.array.isRequired,
