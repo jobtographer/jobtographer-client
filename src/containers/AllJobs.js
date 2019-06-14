@@ -1,7 +1,6 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-
 import Jobs from '../components/jobs/Jobs';
 import { fetchJobs } from '../actions/jobsActions';
 import { getJobsSelector, getJobsLoadingSelector } from '../selectors/jobSelectors';
