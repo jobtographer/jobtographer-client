@@ -23,30 +23,9 @@ class AllJobs extends PureComponent {
   }
 
   render() {
-    // const { loading, /*jobs*/ } = this.props;
-    const jobs = [
-      {
-        title: 'a job',
-        company: 'TopNotch',
-        active: true,
-        jobDescriptionText: 'a job',
-        jobUrl: 'Job.job.com',
-        salary: '100k',
-        location: 'S Beaverton',
-        tracking: 'interested'
-      },
-      {
-        title: 'A second job',
-        company: 'MiddleNotch',
-        active: true,
-        jobDescriptionText: 'a job without benefits',
-        jobUrl: 'indeed.job.com',
-        salary: '0k',
-        location: 'Hillsboro',
-        tracking: 'interested',
-      }
-    ];
-    // if(loading) return <h1>loading...</h1>;
+    const { loading, jobs } = this.props;
+
+    if(loading) return <h1>loading...</h1>;
 
     return <Jobs jobs={jobs} />;
   }
