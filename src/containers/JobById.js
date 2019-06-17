@@ -3,9 +3,8 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import JobDetail from '../components/jobs/JobDetail';
-// actions
-// selectors
-// sessionSelectors
+import { getJobDetail, getJobDetailLoading } from '../selectors/jobDetailSelectors';
+import { fetchJobDetail } from '../actions/jobDetailActions';
 
 class JobById extends PureComponent {
   static propTypes = {
@@ -15,7 +14,7 @@ class JobById extends PureComponent {
   }
 
   componentDidMount() {
-    this.props.fetch;
+    this.props.fetch();
   }
 
   render() {
@@ -27,18 +26,17 @@ class JobById extends PureComponent {
 }
 
 const mapStateToProps = state => ({
-  job: // selectors here
-  loading: // selectors here
+  job: getJobDetail(state),
+  loading: getJobDetailLoading(state)
 });
 
-const mapDispatchToProps = (dipatch, { match }) => ({
+const mapDispatchToProps = (dispatch) => ({
   fetch() {
-    dispatch(fetchJobDetail(match.params.id))
-    // fetchJobDetail ???? action 
+    dispatch(fetchJobDetail());
   }
 });
 
-export default connect(
+export default withRouter(connect(
   mapStateToProps,
   mapDispatchToProps
-)(JobById);
+)(JobById));

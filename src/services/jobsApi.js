@@ -5,7 +5,7 @@ export const createJob = job => post(job);
 // export const getJobById = id => get(`/api/v1/jobs/${id}`);
 
 export const getJobById = () => {
-  return Promise.resolve([
+  return Promise.resolve(
     {
       title: 'a job',
       company: 'TopNotch',
@@ -15,9 +15,10 @@ export const getJobById = () => {
       salary: '100k',
       jobLocation: 'S Beaverton',
       tracking: 'interested',
-      _id: '1'
+      _id: '1',
+      date: '12/23/1989'
     }
-  ]);
+  );
 };
 export const getJobs = () => {
   return Promise.resolve([
@@ -30,7 +31,8 @@ export const getJobs = () => {
       salary: '100k',
       jobLocation: 'S Beaverton',
       tracking: 'interested',
-      _id: '1'
+      _id: '1',
+      date: '12/23/1989'
     }
   ]);
 };
