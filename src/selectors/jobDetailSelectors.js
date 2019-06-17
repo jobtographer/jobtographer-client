@@ -1,3 +1,10 @@
 export const getJobDetailState = state => state.jobDetail;
 export const getJobDetail = state => getJobDetailState(state).detail;
 export const getJobDetailLoading = state => getJobDetailState(state).loading;
+export const getJobDetailTitle = state => getJobDetail(state).title;
+export const getJobDetailCompany = state => getJobDetail(state).company;
+export const getJobDetailJobUrl = state => getJobDetail(state).jobUrl;
+export const getJobDetailJobLocation = state => getJobDetail(state).jobLocation;
+export const getJobDetailJobDesciptionText = state => getJobDetail(state).jobDescriptionText;
+export const getJobDetailSalary = state => getJobDetail(state).salary;
+export const getJobDetailTracking = state => getJobDetail(state).tracking;

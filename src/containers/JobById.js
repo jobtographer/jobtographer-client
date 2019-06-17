@@ -30,9 +30,9 @@ const mapStateToProps = state => ({
   loading: getJobDetailLoading(state)
 });
 
-const mapDispatchToProps = (dispatch) => ({
+const mapDispatchToProps = (dispatch, { match }) => ({
   fetch() {
-    dispatch(fetchJobDetail());
+    dispatch(fetchJobDetail(match.params.id));
   }
 });
 

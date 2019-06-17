@@ -47,4 +47,35 @@ describe('JOB DETAIL REDUCER TEST', () => {
     });
   });
 
+  it('handles the update job action', () => {
+    const initialState = {
+      loading: true,
+      detail: payload
+    };
+    const newState = reducer(initialState, {
+      type: 'UPDATE_JOB_DETAIL',
+      payload: { ...payload, title: 'new title' }
+    });
+    expect(newState).toEqual({
+      loading: false,
+      detail: { ...payload, title: 'new title' }
+      
+    });
+  });
+  
+  it('handle the update detail pending action', () => {
+    const initialState = {
+      loading: false,
+      detail: {}
+    };
+
+    const newState = reducer(initialState, {
+      type: 'UPDATE_JOB_DETAIL_PENDING',
+    });
+    expect(newState).toEqual({
+      loading: true,
+      detail: {}
+    });
+  });
+
 });

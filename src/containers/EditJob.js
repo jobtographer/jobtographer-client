@@ -3,8 +3,16 @@ import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import JobForm from '../components/jobs/JobForm';
-// import updateJobDetail (action)
-// import jobDetailSelectors
+import { 
+  getJobDetailTitle, 
+  getJobDetailCompany, 
+  getJobDetailJobUrl, 
+  getJobDetailJobLocation, 
+  getJobDetailJobDesciptionText, 
+  getJobDetailSalary, 
+  getJobDetailTracking 
+} from '../selectors/jobDetailSelectors';
+import { updateJobDetail } from '../actions/jobDetailActions';
 
 class EditJob extends PureComponent {
   static propTypes = {
@@ -97,17 +105,23 @@ class EditJob extends PureComponent {
   }
 }
 
-const mapStateToProps = dispatch => ({
-  // selectors 
+const mapStateToProps = state => ({
+  title: getJobDetailTitle(state), 
+  company: getJobDetailCompany(state), 
+  jobUrl: getJobDetailJobUrl(state), 
+  jobLocation: getJobDetailJobLocation(state), 
+  jobDescriptionText: getJobDetailJobDesciptionText(state), 
+  salary: getJobDetailSalary(state),
+  tracking: getJobDetailTracking(state)
 });
 
-// const mapDispatchToProps = state => ({
-//   editJob(job) {
-//     dispatch(ACTION(job));
-//   }
-// });
+const mapDispatchToProps = (dispatch, { match }) => ({
+  editJob(job) {
+    dispatch(updateJobDetail({ ...job, _id: match.params.id }));
+  }
+});
 
-export default connect(
+export default withRouter(connect(
   mapStateToProps,
   mapDispatchToProps
-)(EditJob);
+)(EditJob));
