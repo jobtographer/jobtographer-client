@@ -1,26 +1,46 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
+import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { newJob } from '../actions/jobsActions';
 import JobForm from '../components/jobs/JobForm';
+// import updateJobDetail (action)
+// import jobDetailSelectors
 
-class AddJob extends PureComponent {
+class EditJob extends PureComponent {
   static propTypes = {
-    createJob: PropTypes.func.isRequired
+    editJob: PropTypes.func.isRequired,
+    title: PropTypes.string.isRequired, 
+    company: PropTypes.string.isRequired, 
+    jobUrl: PropTypes.string, 
+    jobLocation: PropTypes.string,
+    jobDescriptionText: PropTypes.string,
+    salary: PropTypes.string,
+    tracking: PropTypes.string
   }
+
   state = {
-    title: '',
-    company: '',
-    jobUrl: '',
-    jobLocation: '',
-    jobDescriptionText: '',
+    title: '', 
+    company: '', 
+    jobUrl: '', 
+    jobLocation: '', 
+    jobDescriptionText: '', 
     salary: '',
-    tracking: '',
+    tracking: ''
   }
 
-  handleSubmit = event => {
+  componentDidMount() {
+    this.setState({
+      title: this.props.title, 
+      company: this.props.company, 
+      jobUrl: this.props.jobUrl, 
+      jobLocation: this.props.jobLocation, 
+      jobDescriptionText: this.props.jobDescriptionText, 
+      salary: this.props.salary,
+      tracking: this.props.tracking
+    });
+  }
+  handleSumbit = event => {
     event.preventDefault();
-
     const { 
       title, 
       company, 
@@ -31,7 +51,7 @@ class AddJob extends PureComponent {
       tracking
     } = this.state;
 
-    this.props.createJob({ 
+    this.props.editJob({ 
       title, 
       company, 
       jobUrl, 
@@ -51,13 +71,11 @@ class AddJob extends PureComponent {
       tracking: ''
     });
   }
-
   handleChange = ({ target }) => {
     this.setState({ [target.name]: target.value });
   }
 
   render() {
-
     const { 
       title, 
       company, 
@@ -79,13 +97,17 @@ class AddJob extends PureComponent {
   }
 }
 
-const mapDisptachToProps = dispatch =>({
-  createJob(job) {
-    dispatch(newJob(job));
-  }
+const mapStateToProps = dispatch => ({
+  // selectors 
 });
 
+// const mapDispatchToProps = state => ({
+//   editJob(job) {
+//     dispatch(ACTION(job));
+//   }
+// });
+
 export default connect(
-  null,
-  mapDisptachToProps
-)(AddJob);
+  mapStateToProps,
+  mapDispatchToProps
+)(EditJob);

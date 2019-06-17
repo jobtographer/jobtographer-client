@@ -4,14 +4,15 @@ import PropTypes from 'prop-types';
 function JobForm({ onChange, onSubmit, title, company, jobUrl, jobLocation, salary, jobDescriptionText, tracking }) {
   return (
     <form onSubmit={onSubmit}>
-      <input placeholder= 'title' name="title" value={title} onChange={onChange} />
-      <input placeholder= 'company' name="company" value={company} onChange={onChange} />
-      <input placeholder= 'job url' name="jobUrl" value={jobUrl} onChange={onChange} />
-      <input placeholder = 'location' name="jobLocation" value={jobLocation} onChange={onChange} />
-      <input placeholder = 'description' name="jobDescriptionText" value={jobDescriptionText} onChange={onChange} />
-      <input placeholder = 'salary' name="salary" value={salary} onChange={onChange} />
+      <input placeholder='title' name="title" value={title} onChange={onChange} />
+      <input placeholder='company' name="company" value={company} onChange={onChange} />
+      <input placeholder='job url' name="jobUrl" value={jobUrl} onChange={onChange} />
+      <input placeholder='location' name="jobLocation" value={jobLocation} onChange={onChange} />
+      <input placeholder='description' name="jobDescriptionText" value={jobDescriptionText} onChange={onChange} />
+      <input placeholder='salary' name="salary" value={salary} onChange={onChange} />
 
       <select name='tracking' onChange={onChange}>
+        {/* <option disabled selected *** is mad *** >application progress</option> */}
         <option value={tracking} name="interested">Interested</option>
         <option value={tracking} name="haveApplied">Applied</option>
         <option value={tracking} name="phoneInterviewed">Phone Interviewed</option>

@@ -4,7 +4,7 @@ import {
   Switch,
   Route,
 } from 'react-router-dom';
-// import { withSession } from '../containers/auth/withSession';
+import { withSession } from '../containers/auth/withSession';
 import Dashboard from './Dashboard';
 import Callback from '../containers/auth/Callback';
 import JobById from '../containers/JobById';
