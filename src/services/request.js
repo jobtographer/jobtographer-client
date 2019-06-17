@@ -1,8 +1,11 @@
+import { getToken } from '../selectors/sessionSelector';
+import store from '../store';
 const request = (method, body) => {
   return fetch('http://localhost:7891/api/v1/jobs', {
     method: method,
     headers: {
       'Content-Type': 'application/json',
+      Authorization: `Bearer ${getToken(store.getState())}`
     },
     body: body ? JSON.stringify(body) : null
   })
