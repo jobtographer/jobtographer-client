@@ -12,14 +12,44 @@ class AddJob extends PureComponent {
     title: '',
     company: '',
     jobUrl: '',
-    jobLocation: ''
+    jobLocation: '',
+    jobDescriptionText: '',
+    salary: '',
+    tracking: '',
   }
 
   handleSubmit = event => {
     event.preventDefault();
-    const { title, company, jobUrl, jobLocation } = this.state;
-    this.props.createJob({ title, company, jobUrl, jobLocation });
-    this.setState({ title: '', company: '', jobUrl: '', jobLocation: '' });
+
+    const { 
+      title, 
+      company, 
+      jobUrl, 
+      jobLocation,
+      jobDescriptionText,
+      salary,
+      tracking
+    } = this.state;
+
+    this.props.createJob({ 
+      title, 
+      company, 
+      jobUrl, 
+      jobLocation,
+      jobDescriptionText,
+      salary,
+      tracking
+    });
+
+    this.setState({ 
+      title: '', 
+      company: '', 
+      jobUrl: '', 
+      jobLocation: '', 
+      jobDescriptionText: '', 
+      salary: '',
+      tracking: ''
+    });
   }
 
   handleChange = ({ target }) => {
@@ -27,18 +57,34 @@ class AddJob extends PureComponent {
   }
 
   render() {
-    const { title, company, jobUrl, jobLocation } = this.state;
+
+    const { 
+      title, 
+      company, 
+      jobUrl, 
+      jobLocation,
+      jobDescriptionText,
+      salary,
+      tracking
+    } = this.state;
+
     return (
-      <JobForm onSubmit={this.handleSubmit} onChange={this.handleChange} 
-        title={title} company={company} jobUrl={jobUrl} jobLocation={jobLocation} />
+      <JobForm 
+        onSubmit={this.handleSubmit} onChange={this.handleChange} 
+        title={title} company={company} tracking={tracking}
+        jobUrl={jobUrl} jobLocation={jobLocation}
+        jobDescriptionText={jobDescriptionText} salary={salary} 
+        
+        // atitle={title} acompany={company} atracking={tracking}
+        // ajobUrl={jobUrl} ajobLocation={jobLocation}
+        // ajobDescriptionText={jobDescriptionText} asalary={salary} 
+      />
     );
   }
 }
 
 const mapDisptachToProps = dispatch =>({
-  // createJob is from static propTypes
   createJob(job) {
-    // dispatch sends it... newJob is an action
     dispatch(newJob(job));
   }
 });
@@ -47,4 +93,3 @@ export default connect(
   null,
   mapDisptachToProps
 )(AddJob);
-
