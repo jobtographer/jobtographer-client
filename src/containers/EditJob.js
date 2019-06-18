@@ -2,7 +2,6 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
-import JobForm from '../components/jobs/JobForm';
 import { 
   getJobDetailTitle, 
   getJobDetailCompany, 
@@ -13,6 +12,7 @@ import {
   getJobDetailTracking 
 } from '../selectors/jobDetailSelectors';
 import { updateJobDetail } from '../actions/jobDetailActions';
+import JobDetail from '../components/jobs/JobDetail';
 
 class EditJob extends PureComponent {
   static propTypes = {
@@ -27,7 +27,7 @@ class EditJob extends PureComponent {
   }
 
   state = {
-    title: '', 
+    title: this.props.title, 
     company: '', 
     jobUrl: '', 
     jobLocation: '', 
@@ -69,15 +69,15 @@ class EditJob extends PureComponent {
       tracking
     });
 
-    this.setState({ 
-      title: '', 
-      company: '', 
-      jobUrl: '', 
-      jobLocation: '', 
-      jobDescriptionText: '', 
-      salary: '',
-      tracking: ''
-    });
+    // this.setState({ 
+    //   title: '', 
+    //   company: '', 
+    //   jobUrl: '', 
+    //   jobLocation: '', 
+    //   jobDescriptionText: '', 
+    //   salary: '',
+    //   tracking: ''
+    // });
   }
   handleChange = ({ target }) => {
     this.setState({ [target.name]: target.value });
@@ -95,7 +95,7 @@ class EditJob extends PureComponent {
     } = this.state;
 
     return (
-      <JobForm 
+      <JobDetail
         onSubmit={this.handleSubmit} onChange={this.handleChange} 
         title={title} company={company} tracking={tracking}
         jobUrl={jobUrl} jobLocation={jobLocation}

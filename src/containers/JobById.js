@@ -5,6 +5,7 @@ import { withRouter } from 'react-router-dom';
 import JobDetail from '../components/jobs/JobDetail';
 import { getJobDetail, getJobDetailLoading } from '../selectors/jobDetailSelectors';
 import { fetchJobDetail } from '../actions/jobDetailActions';
+import EditJob from './EditJob';
 
 class JobById extends PureComponent {
   static propTypes = {
@@ -18,10 +19,10 @@ class JobById extends PureComponent {
   }
 
   render() {
-    const { job, loading } = this.props;
+    const { loading } = this.props;
     if(loading) return <h1>Loading...</h1>;
 
-    return <JobDetail job={job} />;
+    return <EditJob />;
   }
 }
 
