@@ -1,0 +1,123 @@
+p {
+  font-size: 2em;
+  background-color: lightgray;
+  border-radius: 20px;
+  padding: 10px;
+  border: 1px solid black;
+}
+
+
+.ImageStripe {
+  position: fixed;
+  height: 40vh;
+  width: 100vw;
+  z-index: -1;
+  margin-top: 125px;
+  padding: 0;
+}
+
+.DetailPage {
+  html {
+    background-color: #dc6c26;
+  }
+}
+.JobDetail {
+  position: relative;
+  background: saddlebrown;
+  border: 3px solid black;
+  border-radius: 20px;
+  width: 75vw;
+  padding: 15px;
+  padding-bottom: 80px;
+  margin: auto;
+  margin-top: 200px;
+  z-index: 1;
+  
+  
+
+
+  h1 {
+    text-align: center;
+  }
+
+  input {
+    display: inline-block;
+    color: purple;
+    border-radius: 5px;
+    padding: 10px;
+    background: transparent;
+    border: none;
+    width: 60vw;
+    margin: auto;
+    margin-left: 20px;
+  }
+
+  input:hover {
+      background-color: orange;
+  }
+
+  .Company {
+    input {
+      width: 55vw;
+    }
+  }
+
+  .URL {
+    input {
+      width: 55vw;
+    }
+  }
+
+  .Location {
+    input {
+      width: 50vw;  
+    }
+  }
+
+  .JobDescription {
+    input {
+      height: 50px;  
+      width: 65vw;
+    }
+  }
+
+  .Tracker {
+    select {
+      color: purple;
+      display: inline-block;
+      margin-left: 100px;
+      margin-top: 5px;
+      padding: 10px;
+      border-radius: 5px;
+      background-color: lightgray;
+    }
+
+    select:hover {
+      background-color: orange;
+  }
+
+    p {
+      display: inline-block;
+      font-size: .5em;
+      border: none;
+      color: purple;
+    }
+  }
+
+  .Notes {
+    input {
+      height: 50px;  
+      width: 65vw;
+    }
+  }
+
+  button {
+    border-radius: 5px;
+    background-color: lightgray;
+    padding: 10px;
+    float: right;
+    margin: 5px;
+    
+  }
+  
+}
