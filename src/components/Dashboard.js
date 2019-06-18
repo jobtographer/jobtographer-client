@@ -1,12 +1,21 @@
 import React from 'react';
-import AddJob from '../containers/AddJob';
-import AllJobs from '../containers/AllJobs';
+// import AddJob from '../containers/AddJob';
+// import AllJobs from '../containers/AllJobs';
 
+//-------- UNDO DASHBOARD CHANGES -----\\
+import LandingPage from '../containers/landing/LandingPage';
 export default function Dashboard() {
   return (
   <>
-    <AddJob />
-    <AllJobs />
+    <LandingPage />
   </>
   );
 }
+// export default function Dashboard() {
+//   return (
+//   <>
+//     <AddJob />
+//     <AllJobs />
+//   </>
+//   );
+// }

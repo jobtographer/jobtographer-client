@@ -1,0 +1,116 @@
+.LandingPage {
+  box-sizing: border-box;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+
+.leftLogo {
+  position: absolute;
+  width: 7rem;
+}
+
+.section1 {
+  box-sizing: border-box;
+  width: 50vw;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  section {
+    box-sizing: border-box;
+    height: 55vh;
+    width: 30vw;
+    background: black;
+    border-radius: 10px 0px 0px 10px;
+    
+    display: flex;
+    align-self: flex-end;
+    align-items: center;
+    justify-content: flex-end;
+
+  } 
+  section img {
+
+    width: 30em;
+  }
+
+}
+
+.section2 {
+  box-sizing: border-box;
+  width: 50vw;
+  background: orange;
+
+  img {
+    width: 7.5rem;
+    float: right;
+  }
+
+  div {
+    height: 100vh;
+    width: 45vw;
+    position: absolute;
+    bottom: 0;
+    border: solid orange;
+
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+    h1 {
+      font-size: 3em;
+      margin: 1rem;
+    }
+
+    p {
+      font-size: 1.5em;
+      margin: 1rem 0 8rem 0;
+      width: 20rem;
+    }
+
+    button {
+      background: rgba(0, 0, 0, 0.221);
+      padding: .1em 1em;
+      border: solid black;
+      font-size: 2.3em;
+      border-radius: 5px;
+    }
+  
+    button:hover {
+      background: rgba(255, 255, 255, 0.221);
+      transition: 200ms ease-in;
+    }
+
+  }
+}
+
+.Aside {
+  height: 60vh;
+  width: 5rem;
+  float: left;
+  position: absolute;
+  bottom: 0;
+  overflow: hidden;
+
+  div {
+    margin: 2rem 0;
+    transform: skewY(50deg);
+    background: black;
+    width: 3rem;
+    height: 2.3rem;
+  }
+}
+
+.arrowsblack {
+  position: absolute;
+  left: 48.45vw;
+  bottom: 0;
+  width: 500px;
+
+}
