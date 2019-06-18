@@ -2,21 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function JobForm({ onChange, onSubmit, submitText, title, company, jobUrl, jobLocation, salary, jobDescriptionText, tracking,
-  atitle,
-  acompany,
-  ajobUrl,
-  ajobLocation,
-  ajobDescriptionText,
-  asalary
 }) {
   return (
     <form onSubmit={onSubmit}>
-      <input placeholder={atitle} name="title" value={title} onChange={onChange} />
-      <input placeholder={acompany} name="company" value={company} onChange={onChange} />
-      <input placeholder={ajobUrl} name="jobUrl" value={jobUrl} onChange={onChange} />
-      <input placeholder={ajobLocation} name="jobLocation" value={jobLocation} onChange={onChange} />
-      <input placeholder={ajobDescriptionText} name="jobDescriptionText" value={jobDescriptionText} onChange={onChange} />
-      <input placeholder={asalary} name="salary" value={salary} onChange={onChange} />
+      <input placeholder='title' name="title" value={title} onChange={onChange} />
+      <input placeholder='company' name="company" value={company} onChange={onChange} />
+      <input placeholder='posting url' name="jobUrl" value={jobUrl} onChange={onChange} />
+      <input placeholder='location' name="jobLocation" value={jobLocation} onChange={onChange} />
+      <input placeholder='description' name="jobDescriptionText" value={jobDescriptionText} onChange={onChange} />
+      <input placeholder='salary' name="salary" value={salary} onChange={onChange} />
 
       <select name='tracking' onChange={onChange}>
         {/* <option disabled selected *** is mad *** >application progress</option> */}
@@ -38,6 +32,7 @@ JobForm.propTypes = {
   onChange: PropTypes.func.isRequired,
   onSubmit: PropTypes.func.isRequired,
   submitText: PropTypes.string,
+  
   title: PropTypes.string.isRequired,
   company: PropTypes.string.isRequired,
   jobLocation: PropTypes.string,
@@ -45,25 +40,10 @@ JobForm.propTypes = {
   salary: PropTypes.string,
   jobDescriptionText: PropTypes.string,
   tracking: PropTypes.string,
-  
-  atitle: PropTypes.string,
-  acompany: PropTypes.string,
-  ajobLocation: PropTypes.string,
-  ajobUrl: PropTypes.string,
-  asalary: PropTypes.string,
-  ajobDescriptionText: PropTypes.string,
-  atracking: PropTypes.string
 };
 
 JobForm.defaultProps = {
   submitText: 'Add Job',
-  atitle: 'title',
-  acompany: 'company',
-  ajobLocation: 'location',
-  ajobUrl: 'posting url',
-  asalary: 'salary',
-  ajobDescriptionText: 'description',
-  atracking: 'application progress'
 };
 
 export default JobForm;

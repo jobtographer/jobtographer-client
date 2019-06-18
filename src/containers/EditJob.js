@@ -17,6 +17,7 @@ import JobDetail from '../components/jobs/JobDetail';
 class EditJob extends PureComponent {
   static propTypes = {
     editJob: PropTypes.func.isRequired,
+    
     title: PropTypes.string.isRequired, 
     company: PropTypes.string.isRequired, 
     jobUrl: PropTypes.string, 
@@ -27,7 +28,7 @@ class EditJob extends PureComponent {
   }
 
   state = {
-    title: this.props.title, 
+    title: '', 
     company: '', 
     jobUrl: '', 
     jobLocation: '', 
@@ -47,7 +48,8 @@ class EditJob extends PureComponent {
       tracking: this.props.tracking
     });
   }
-  handleSumbit = event => {
+
+  handleSubmit = event => {
     event.preventDefault();
     const { 
       title, 
@@ -68,17 +70,8 @@ class EditJob extends PureComponent {
       salary,
       tracking
     });
-
-    // this.setState({ 
-    //   title: '', 
-    //   company: '', 
-    //   jobUrl: '', 
-    //   jobLocation: '', 
-    //   jobDescriptionText: '', 
-    //   salary: '',
-    //   tracking: ''
-    // });
   }
+
   handleChange = ({ target }) => {
     this.setState({ [target.name]: target.value });
   }

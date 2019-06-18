@@ -2,12 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function JobDetail({ onChange, onSubmit, title, company, jobUrl, jobLocation, salary, jobDescriptionText, tracking,
-  // atitle,
-  // acompany,
-  // ajobUrl,
-  // ajobLocation,
-  // ajobDescriptionText,
-  // asalary
 }) {
   return (
     <form onSubmit={onSubmit}>
@@ -34,8 +28,8 @@ function JobDetail({ onChange, onSubmit, title, company, jobUrl, jobLocation, sa
 }
 
 JobDetail.propTypes = {
-  onChange: PropTypes.func,
-  onSubmit: PropTypes.func,
+  onChange: PropTypes.func.isRequired,
+  onSubmit: PropTypes.func.isRequired,
 
   title: PropTypes.string.isRequired,
   company: PropTypes.string.isRequired,
@@ -45,23 +39,23 @@ JobDetail.propTypes = {
   jobDescriptionText: PropTypes.string,
   tracking: PropTypes.string,
   
-  atitle: PropTypes.string,
-  acompany: PropTypes.string,
-  ajobLocation: PropTypes.string,
-  ajobUrl: PropTypes.string,
-  asalary: PropTypes.string,
-  ajobDescriptionText: PropTypes.string,
-  atracking: PropTypes.string
-};
+  //   atitle: PropTypes.string,
+  //   acompany: PropTypes.string,
+  //   ajobLocation: PropTypes.string,
+  //   ajobUrl: PropTypes.string,
+  //   asalary: PropTypes.string,
+  //   ajobDescriptionText: PropTypes.string,
+  //   atracking: PropTypes.string
+  // };
 
-JobDetail.defaultProps = {
-  atitle: 'title',
-  acompany: 'company',
-  ajobLocation: 'location',
-  ajobUrl: 'posting url',
-  asalary: 'salary',
-  ajobDescriptionText: 'description',
-  atracking: 'application progress'
+// JobDetail.defaultProps = {
+//   atitle: 'title',
+//   acompany: 'company',
+//   ajobLocation: 'location',
+//   ajobUrl: 'posting url',
+//   asalary: 'salary',
+//   ajobDescriptionText: 'description',
+//   atracking: 'application progress'
 };
 
 export default JobDetail;
