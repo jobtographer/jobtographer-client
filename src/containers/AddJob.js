@@ -74,6 +74,10 @@ class AddJob extends PureComponent {
         title={title} company={company} tracking={tracking}
         jobUrl={jobUrl} jobLocation={jobLocation}
         jobDescriptionText={jobDescriptionText} salary={salary} 
+        
+        // atitle={title} acompany={company} atracking={tracking}
+        // ajobUrl={jobUrl} ajobLocation={jobLocation}
+        // ajobDescriptionText={jobDescriptionText} asalary={salary} 
       />
     );
   }
