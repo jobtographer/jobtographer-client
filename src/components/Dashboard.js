@@ -11,15 +11,9 @@ export default function Dashboard() {
   return (
   <>
     <StyledDashboard>
-      <section>
-        <NavBar />
-      </section>
-      <section>
-        <UserNav />
-      </section>
-      <section >
-        <AddJob />
-      </section>
+      <NavBar />
+      <UserNav />
+      <AddJob />
       <AllJobsDisplay>
         <AllJobs />
       </AllJobsDisplay>

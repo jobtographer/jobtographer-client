@@ -10,9 +10,7 @@ class NavBar extends Component {
       <>
         <UserNavBar id="user-navigationBar">
           <img src='../../../assets/userimage.jpg' />
-          <ul id="userNav">
-            <li><a href="/">Logout</a></li>
-          </ul>
+          <a href="/">Logout</a>
         </UserNavBar>
       </>
     );

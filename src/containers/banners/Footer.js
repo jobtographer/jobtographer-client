@@ -7,6 +7,7 @@ class Footer extends Component {
     return (
       <>
         <GeneralFooter>
+          <span>~ Footer here ~</span>
           <ul>
             <li><a href="AboutUs">About Us</a></li>
           </ul>

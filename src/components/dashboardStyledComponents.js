@@ -1,14 +1,11 @@
 import styled from 'styled-components';
 
 export const StyledDashboard = styled.section`
-  * {
-    box-sizing: border-box;
-  }
   ul {
     list-style-type: none;
   }
 
-  li a {
+  li a, a {
     font-family: 'Rubik', sans-serif;
     color: black;
     text-decoration: none;
@@ -26,13 +23,36 @@ export const AddJobForm = styled.form`
 `;
 
 export const AllJobsDisplay = styled.section`
-  border: 2px dashed red;
-  color: fuchsia;
-  width: auto;
-  height: auto;
-  padding: 1.25rem;
-  margin-top: 20px;
-  margin-left: 180px;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  ul {
+    border: solid grey;
+    color: fuchsia;
+    width: 60vw;
+    height: auto;
+    padding: 1.25rem;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: yellow;
+  }
+
+  li {
+    margin: 1rem;
+    background: orange;
+  }
+
+  p, h3 {
+    display: inline-block;
+    margin-right: 1rem;
+  }
 `;
 
 export const GeneralNavBar = styled.section`
@@ -62,6 +82,9 @@ export const Li1 = styled.li`
 `;
 
 export const Li2 = styled.li`
+  a:hover {
+    color: white;
+  }
   margin: 1rem;
   margin-left: 50px;
 `;
@@ -70,30 +93,39 @@ export const UserNavBar = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
   float: left;
-  width: 10rem;
-  height: 500px;
+  position: fixed;
+  bottom: 0;
+  background: black;
+  color: white;
+  width: 5rem;
+  height: 50vh;
   margin-top: 2rem;
-  border: 2px dashed grey;
-
+  clip-path: polygon(0% 0%, 100% 20%, 100% 100%, 0% 100%);
+  
   img {
-    width: 100px;
-    height: 100px;
+    width: 3rem;
+    height: 3rem;
     border-radius: 100%;
-    margin-left: 2rem;
-    margin-top: 1.5rem;
+    margin-top: 7rem;
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
   }
 `;
 
 export const GeneralFooter = styled.footer`
   display: flex;
-  position: relative;
-  top: 150px;
-  width: 100%;
-  font-size: 1.25em;
+  justify-content: center;
+
+  position: fixed;
+  bottom: 0;
   width: 100vw;
-  margin: 2rem;
-  padding: 1.25rem;
+  
+  font-size: 1.25em;
 `;
 
 export const AboutUsDisplay = styled.section`

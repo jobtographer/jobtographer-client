@@ -1,12 +1,4 @@
-import styled, { createGlobalStyle } from 'styled-components';
-
-//global style is a wrapper in App, see notes-app/app.js
-export const GlobalStyle = createGlobalStyle`
-  * {
-    margin: 0;
-    padding: 0;
-  }
-`;
+import styled from 'styled-components';
 
 export const BackgroundDiv = styled.div`
   display: flex;

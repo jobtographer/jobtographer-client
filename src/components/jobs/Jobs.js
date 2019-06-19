@@ -4,16 +4,17 @@ import Job from './Job';
 
 function Jobs({ jobs }) {
   console.log(jobs);
-  const jobList = jobs.map((job) => (
-    // <li key={index}>
+  const jobList = jobs.map(job => (
     <li key={job._id}>
       <Job job={job} />
     </li>
   ));
   return (
-    <ul>
-      {jobList}
-    </ul>
+    <div>
+      <ul>
+        {jobList}
+      </ul>
+    </div>
   );
 }
 
