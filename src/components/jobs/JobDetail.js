@@ -16,6 +16,7 @@ function JobDetail({ onChange, onSubmit, title, company, jobUrl, jobLocation, sa
         <ImageStripe></ImageStripe>
         <Form onSubmit={onSubmit}>
           <h1>Details for {title} </h1>
+          <h2>current job status: {tracking}</h2>
           <P>Title |
             <Input placeholder={title} name="title" value={title} onChange={onChange} />
           </P>

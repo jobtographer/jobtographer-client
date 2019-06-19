@@ -5,13 +5,11 @@ export const GlobalStyle = createGlobalStyle`
   * {
     margin: 0;
     padding: 0;
-    background-color: orange;
   }
 `;
 
 export const BackgroundDiv = styled.div`
   display: flex;
-  
   width: 100vw;
   height: 100vh;
   background-color: gainsboro;
