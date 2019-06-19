@@ -9,9 +9,11 @@ function Jobs({ jobs }) {
     </li>
   ));
   return (
-    <ul>
-      {jobList}
-    </ul>
+    <div>
+      <ul>
+        {jobList}
+      </ul>
+    </div>
   );
 }
 

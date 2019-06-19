@@ -5,28 +5,19 @@ import NavBar from '../containers/banners/NavBar';
 import UserNav from '../containers/banners/UserNav';
 import Footer from '../containers/banners/Footer';
 import { AllJobsDisplay, StyledDashboard } from './dashboardStyledComponents';
-import { GeneralFooter } from '../containers/banners/bannerStyledComponents';
-
+import { Footer } from '../containers/banners/bannerStyledComponents';
 
 export default function Dashboard() {
   return (
   <>
     <StyledDashboard>
-      <section>
-        <NavBar />
-      </section>
-      <section>
-        <UserNav />
-      </section>
-      <section >
-        <AddJob />
-      </section>
+      <NavBar />
+      <UserNav />
+      <AddJob />
       <AllJobsDisplay>
         <AllJobs />
       </AllJobsDisplay>
-      <GeneralFooter>
-        <Footer />
-      </GeneralFooter>
+      <Footer />
     </StyledDashboard>
   </>
   );

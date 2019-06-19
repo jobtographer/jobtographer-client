@@ -16,6 +16,8 @@ class AddJob extends PureComponent {
     jobDescriptionText: '',
     salary: '',
     tracking: '',
+    resume: '',
+    coverLetter: ''
   }
 
   handleSubmit = event => {
@@ -28,7 +30,9 @@ class AddJob extends PureComponent {
       jobLocation,
       jobDescriptionText,
       salary,
-      tracking
+      tracking,
+      resume,
+      coverLetter
     } = this.state;
 
     this.props.createJob(
@@ -39,7 +43,9 @@ class AddJob extends PureComponent {
         jobLocation,
         jobDescriptionText,
         salary,
-        tracking
+        tracking,
+        resume,
+        coverLetter
       }
     );
 
@@ -50,7 +56,9 @@ class AddJob extends PureComponent {
       jobLocation: '', 
       jobDescriptionText: '', 
       salary: '',
-      tracking: ''
+      tracking: '',
+      resume: '',
+      coverLetter: ''
     });
   }
 
@@ -68,25 +76,23 @@ class AddJob extends PureComponent {
       jobLocation,
       jobDescriptionText,
       salary,
-      tracking
+      tracking,
+      resume,
+      coverLetter
     } = this.state;
 
     return (
       <JobForm 
         onSubmit={this.handleSubmit} onChange={this.handleChange} 
-        title={title} company={company} tracking={tracking}
-        jobUrl={jobUrl} jobLocation={jobLocation}
+        title={title} company={company} tracking={tracking} coverLetter={coverLetter}
+        jobUrl={jobUrl} jobLocation={jobLocation} resume={resume}
         jobDescriptionText={jobDescriptionText} salary={salary} 
-        
-        // atitle={title} acompany={company} atracking={tracking}
-        // ajobUrl={jobUrl} ajobLocation={jobLocation}
-        // ajobDescriptionText={jobDescriptionText} asalary={salary} 
       />
     );
   }
 }
 
-const mapDisptachToProps = dispatch =>({
+const mapDisptachToProps = dispatch => ({
   createJob(job) {
     console.log('job in map disptach to props', job);
     dispatch(newJob(job));

@@ -1,11 +1,14 @@
 import { combineReducers } from 'redux';
 
-import jobs from './jobReducer';
 import session from './sessionReducer';
+import jobs from './jobReducer';
 import jobDetail from './jobDetailReducer';
+import notes from './noteReducer';
+
 
 export default combineReducers({
   jobs,
   session,
-  jobDetail
+  jobDetail,
+  notes
 });
