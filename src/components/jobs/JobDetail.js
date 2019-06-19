@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { 
   BackgroundDiv, Form, 
   P, Input,
-  TrackerSelect, TrackerSpan,
+  TrackerSelect, H5, H1,
   Button, ImageStripe
 } from './detailStyledComponents';
 
@@ -15,8 +15,8 @@ function JobDetail({ onChange, onSubmit, title, company, jobUrl, jobLocation, sa
 
         <ImageStripe></ImageStripe>
         <Form onSubmit={onSubmit}>
-          <h1>Details for {title} </h1>
-          <h2>current job status: {tracking}</h2>
+          <H1>Details for {title} </H1>
+          <H5>edit sections and click update to save changes</H5>
           <P>Title |
             <Input placeholder={title} name="title" value={title} onChange={onChange} />
           </P>
@@ -41,7 +41,7 @@ function JobDetail({ onChange, onSubmit, title, company, jobUrl, jobLocation, sa
             <Input placeholder={salary} name="salary" value={salary} onChange={onChange} />
           </P>
         
-          <P>Job Progress Tracker | <TrackerSpan>{tracking}</TrackerSpan>
+          <P>Job Progress Tracker |
             <TrackerSelect defaultValue={tracking} name='tracking' onChange={onChange}>
               <option value={tracking} disabled>{tracking}</option>
               <option name="interested">Interested</option>

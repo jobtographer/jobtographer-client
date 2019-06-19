@@ -26,6 +26,15 @@ export const Form = styled.form`
   z-index: 5;
 `;
 
+export const H1 = styled.h1`
+  text-align: center;
+`;
+
+export const H5 = styled.h5`
+  font-size: 1.5em;
+  text-align: center;
+`;
+
 export const P  = styled.p`
   font-size: 2em;
   background-color: lightgray;
@@ -37,11 +46,12 @@ export const P  = styled.p`
 export const Input = styled.input`
   display: inline-block;
   color: purple;
+  font-size: .7em;
   border-radius: 5px;
   padding: 10px;
   background: transparent;
   border: none;
-  width: 55vw;
+  width: 50vw;
   margin: auto;
   margin-left: 20px;
 
@@ -52,8 +62,9 @@ export const Input = styled.input`
 
 export const TrackerSelect = styled.select`
   color: purple;
+  font-size: .7em;
   display: inline-block;
-  margin-left: 100px;
+  margin-left: 1.5rem;
   margin-top: 5px;
   padding: 10px;
   border-radius: 5px;
@@ -62,11 +73,6 @@ export const TrackerSelect = styled.select`
   :hover {
     background-color: orange;
   }
-`;
-
-export const TrackerSpan = styled.span`
-  font-size: .5em;
-  color: purple;
 `;
 
 export const Button = styled.button`
