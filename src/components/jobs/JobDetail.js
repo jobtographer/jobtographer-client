@@ -53,7 +53,7 @@ function JobDetail({ onChange, onSubmit, title, company, jobUrl, jobLocation, sa
           </P>
 
           <P>Notes |
-            <Input placeholder="add notesText in curlies" name="notesText" value="add notesText in curlies" onChange={onChange} />
+            <Input placeholder="{notesText}" name="notesText" value="{notesText}" onChange={onChange} />
           </P>
 
           <Button>Update Job</Button>
