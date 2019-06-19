@@ -1,13 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { NoteDiv } from '../notes/notesStyledComponents';
 
 function Note({ note }) {
   const { title, body } = note;
   return (
-    <div>
+    <NoteDiv>
       <h3>{title}</h3>
       <p>{body}</p>
-    </div>
+    </NoteDiv>
   );
 }
 Note.propTypes = {

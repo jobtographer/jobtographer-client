@@ -11,7 +11,6 @@ class Footer extends Component {
           <ul>
             <li><a href="AboutUs">About Us</a></li>
           </ul>
-
         </GeneralFooter>
       </>
     );

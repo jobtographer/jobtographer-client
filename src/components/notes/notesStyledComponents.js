@@ -1,15 +1,9 @@
 import styled from 'styled-components';
 
-export const BackgroundDiv = styled.div`
-  display: flex;
-  width: 100vw;
-  height: 100vh;
-  background-color: gainsboro;
-`;
 
 export const Form = styled.form`
   border: 3px solid black;
-  width: 50vw;
+  width: 25vw;
   margin: auto;
   padding: 3em;
   background-image: url("../../../assets/lucas-benjamin-729304-unsplash.jpg");
@@ -17,16 +11,8 @@ export const Form = styled.form`
   z-index: 5;
 `;
 
-export const H1 = styled.h1`
-  text-align: center;
-`;
-
-export const H5 = styled.h5`
-  font-size: 1.5em;
-  text-align: center;
-`;
-
 export const P  = styled.p`
+  display: inline-block;
   font-size: 2em;
   background-color: lightgray;
   border-radius: 20px;
@@ -42,13 +28,18 @@ export const Input = styled.input`
   padding: 10px;
   background: transparent;
   border: none;
-  width: 30vw;
+  width: 20vw;
   margin: auto;
   margin-left: 20px;
 
   :hover {
     background-color: orange;
   }
+`;
+
+export const H2 = styled.h2`
+  text-align: center;
+  font-size: 2em;
 `;
 
 export const TextArea = styled.textarea`
@@ -59,24 +50,9 @@ export const TextArea = styled.textarea`
   padding: 10px;
   background: transparent;
   border: none;
-  width: 50vw;
+  width: 20vw;
   margin: auto;
   margin-left: 20px;
-
-  :hover {
-    background-color: orange;
-  }
-`;
-
-export const TrackerSelect = styled.select`
-  color: purple;
-  font-size: .7em;
-  display: inline-block;
-  margin-left: 1.5rem;
-  margin-top: 5px;
-  padding: 10px;
-  border-radius: 5px;
-  background-color: lightgray;
 
   :hover {
     background-color: orange;
@@ -91,14 +67,27 @@ export const Button = styled.button`
   margin: 5px;
 `;
 
-export const ImageStripe = styled.div`
-  background-image: url("../../../assets/glow-hexagon-black-orange-white-gradient-1920x1080-c4-000000-ffffff-ff8c00-000000-l2-16-203-a-25-f-6.png");
-  background-position: center;
-  color: black;
-  width: 80vw;
-  height: 25vh;
-  position: fixed;
-  top: 40vh;
-  z-index: 1;
-  background-color: black;
+export const AddNotesDiv = styled.div`
+  border: 3px solid black;
+  width: 25vw;
+  margin: auto;
+  padding: 3em;
+  background-image: url("../../../assets/lucas-benjamin-729304-unsplash.jpg");
+  border-radius: 20px;
+  z-index: 5;
+`;
+
+export const NoteDiv = styled.div`
+  border: 2px solid black;
+  background: lightgray;
+  border: 3px solid black;
+  border-radius: 20px;
+  min-height: 5em;
+  margin: 5px;
+  padding: 3px;
+`;
+
+export const NoteUl = styled.ul`
+  list-style-type: none;
+
 `;

@@ -16,7 +16,7 @@ function JobDetail({ onChange, onSubmit, title, company, jobUrl, jobLocation, sa
   return (
     <BackgroundDiv>
       <UserNavBar />
-      <ImageStripe></ImageStripe>
+      {/* <ImageStripe></ImageStripe> */}
       <Form onSubmit={onSubmit}>
         <H1>Details for {title} </H1>
         <H5>edit sections and click update to save changes</H5>
@@ -66,9 +66,11 @@ function JobDetail({ onChange, onSubmit, title, company, jobUrl, jobLocation, sa
 
         <Button>Update Job</Button>
       </Form>
+      <div>
+        <AllNotes />
+        <AddNote />
 
-      <AllNotes />
-      <AddNote />
+      </div>
 
       <Footer />
     </BackgroundDiv>
