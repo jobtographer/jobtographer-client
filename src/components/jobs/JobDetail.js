@@ -42,14 +42,14 @@ function JobDetail({ onChange, onSubmit, title, company, jobUrl, jobLocation, sa
           </P>
         
           <P>Job Progress Tracker | <TrackerSpan>{tracking}</TrackerSpan>
-            <TrackerSelect name='tracking' onChange={onChange}>
-              {/* <option disabled selected *** is mad *** >application progress</option> */}
-              <option value={tracking} name="interested">Interested</option>
-              <option value={tracking} name="haveApplied">Applied</option>
-              <option value={tracking} name="phoneInterviewed">Phone Interviewed</option>
-              <option value={tracking} name="technicalInterviewed">Technical Interview</option>
-              <option value={tracking} name="inPersonInterviewed">In Person Interview</option>
-              <option value={tracking} name="jobOffer">Job Offer</option>
+            <TrackerSelect defaultValue={tracking} name='tracking' onChange={onChange}>
+              <option value={tracking} disabled>{tracking}</option>
+              <option name="interested">Interested</option>
+              <option name="haveApplied">Applied</option>
+              <option name="phoneInterviewed">Phone Interviewed</option>
+              <option name="technicalInterviewed">Technical Interview</option>
+              <option name="inPersonInterviewed">In Person Interview</option>
+              <option name="jobOffer">Job Offer</option>
             </TrackerSelect>
           </P>
 
@@ -65,34 +65,16 @@ function JobDetail({ onChange, onSubmit, title, company, jobUrl, jobLocation, sa
 }
 
 JobDetail.propTypes = {
-  onChange: PropTypes.func.isRequired,
-  onSubmit: PropTypes.func.isRequired,
+  onChange: PropTypes.func,
+  onSubmit: PropTypes.func,
 
-  title: PropTypes.string.isRequired,
-  company: PropTypes.string.isRequired,
+  title: PropTypes.string,
+  company: PropTypes.string,
   jobLocation: PropTypes.string,
   jobUrl: PropTypes.string,
   salary: PropTypes.string,
   jobDescriptionText: PropTypes.string,
   tracking: PropTypes.string,
-  
-  //   atitle: PropTypes.string,
-  //   acompany: PropTypes.string,
-  //   ajobLocation: PropTypes.string,
-  //   ajobUrl: PropTypes.string,
-  //   asalary: PropTypes.string,
-  //   ajobDescriptionText: PropTypes.string,
-  //   atracking: PropTypes.string
-  // };
-
-// JobDetail.defaultProps = {
-//   atitle: 'title',
-//   acompany: 'company',
-//   ajobLocation: 'location',
-//   ajobUrl: 'posting url',
-//   asalary: 'salary',
-//   ajobDescriptionText: 'description',
-//   atracking: 'application progress'
 };
 
 export default JobDetail;
