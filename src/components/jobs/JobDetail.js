@@ -1,63 +1,64 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from '../jobs/jobDetail.css';
+import { 
+  BackgroundDiv, Form, 
+  P, Input,
+  TrackerSelect, TrackerSpan,
+  Button, ImageStripe
+} from './detailStyledComponents';
 
 function JobDetail({ onChange, onSubmit, title, company, jobUrl, jobLocation, salary, jobDescriptionText, tracking,
 }) {
   return (
     <>
-      <span className={styles.DetailPage}>
+      <BackgroundDiv>
 
-   
-        <img className={styles.ImageStripe} src="../../../assets/glow-hexagon-black-orange-white-gradient-1920x1080-c4-000000-ffffff-ff8c00-000000-l2-16-203-a-25-f-6.png"></img>
+        <ImageStripe></ImageStripe>
+        <Form onSubmit={onSubmit}>
+          <h1>Details for {title} </h1>
+          <P>Title |
+            <Input placeholder={title} name="title" value={title} onChange={onChange} />
+          </P>
 
-        <div className={styles.JobDetail} >
-          <h1>I want a job as a {title} </h1>
-          <form onSubmit={onSubmit}>
-            <p className={styles.Title}>Title |
-              <input placeholder={title} name="title" value={title} onChange={onChange} />
-            </p>
+          <P>Company |
+            <Input placeholder={company} name="company" value={company} onChange={onChange} />
+          </P>
 
-            <p className={styles.Company}>Company |
-              <input placeholder={company} name="company" value={company} onChange={onChange} />
-            </p>
+          <P>Job URL |
+            <Input placeholder={jobUrl} name="jobUrl" value={jobUrl} onChange={onChange} />
+          </P>
 
-            <p className={styles.URL}>Job URL |
-              <input placeholder={jobUrl} name="jobUrl" value={jobUrl} onChange={onChange} />
-            </p>
+          <P>Job Location |
+            <Input placeholder={jobLocation} name="jobLocation" value={jobLocation} onChange={onChange} />
+          </P>
 
-            <p className={styles.Location}>Job Location |
-              <input placeholder={jobLocation} name="jobLocation" value={jobLocation} onChange={onChange} />
-            </p>
+          <P>Job Description |
+            <Input placeholder={jobDescriptionText} name="jobDescriptionText" value={jobDescriptionText} onChange={onChange} />
+          </P>
 
-            <p className={styles.JobDescription}>Job Description |
-              <input placeholder={jobDescriptionText} name="jobDescriptionText" value={jobDescriptionText} onChange={onChange} />
-            </p>
+          <P>Salary |
+            <Input placeholder={salary} name="salary" value={salary} onChange={onChange} />
+          </P>
+        
+          <P>Job Progress Tracker | <TrackerSpan>{tracking}</TrackerSpan>
+            <TrackerSelect name='tracking' onChange={onChange}>
+              {/* <option disabled selected *** is mad *** >application progress</option> */}
+              <option value={tracking} name="interested">Interested</option>
+              <option value={tracking} name="haveApplied">Applied</option>
+              <option value={tracking} name="phoneInterviewed">Phone Interviewed</option>
+              <option value={tracking} name="technicalInterviewed">Technical Interview</option>
+              <option value={tracking} name="inPersonInterviewed">In Person Interview</option>
+              <option value={tracking} name="jobOffer">Job Offer</option>
+            </TrackerSelect>
+          </P>
 
-            <p>Salary |
-              <input placeholder={salary} name="salary" value={salary} onChange={onChange} />
-            </p>
-          
-            <p className={styles.Tracker}>Job Progress Tracker | <span>{tracking}</span>
-              <select name='tracking' onChange={onChange}>
-                {/* <option disabled selected *** is mad *** >application progress</option> */}
-                <option value={tracking} name="interested">Interested</option>
-                <option value={tracking} name="haveApplied">Applied</option>
-                <option value={tracking} name="phoneInterviewed">Phone Interviewed</option>
-                <option value={tracking} name="technicalInterviewed">Technical Interview</option>
-                <option value={tracking} name="inPersonInterviewed">In Person Interview</option>
-                <option value={tracking} name="jobOffer">Job Offer</option>
-              </select>
-            </p>
+          <P>Notes |
+            <Input placeholder="add notesText in curlies" name="notesText" value="add notesText in curlies" onChange={onChange} />
+          </P>
 
-            <p className={styles.Notes}>Notes |
-              <input placeholder="add notesText in curlies" name="notesText" value="add notesText in curlies" onChange={onChange} />
-            </p>
-
-            <button>Update Job</button>
-          </form>
-        </div>
-      </span>
+          <Button>Update Job</Button>
+        </Form>
+      </BackgroundDiv>
     </>
   );
 }
