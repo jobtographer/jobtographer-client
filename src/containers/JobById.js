@@ -8,20 +8,22 @@ import EditJob from './EditJob';
 
 class JobById extends PureComponent {
   static propTypes = {
-    job: PropTypes.object.isRequired,
-    fetch: PropTypes.func.isRequired,
-    loading: PropTypes.bool.isRequired
+    job: PropTypes.array,
+    fetch: PropTypes.func,
+    loading: PropTypes.bool
   }
+
 
   componentDidMount() {
     this.props.fetch();
   }
 
   render() {
+    console.log('JobById', this.props.job);
     const { loading } = this.props;
     if(loading) return <h1>Loading...</h1>;
 
-    return <EditJob />;
+    return <EditJob  />;
   }
 }
 

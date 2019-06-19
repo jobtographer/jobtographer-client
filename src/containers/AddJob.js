@@ -31,15 +31,17 @@ class AddJob extends PureComponent {
       tracking
     } = this.state;
 
-    this.props.createJob({ 
-      title, 
-      company, 
-      jobUrl, 
-      jobLocation,
-      jobDescriptionText,
-      salary,
-      tracking
-    });
+    this.props.createJob(
+      { 
+        title, 
+        company, 
+        jobUrl, 
+        jobLocation,
+        jobDescriptionText,
+        salary,
+        tracking
+      }
+    );
 
     this.setState({ 
       title: '', 
@@ -53,6 +55,7 @@ class AddJob extends PureComponent {
   }
 
   handleChange = ({ target }) => {
+    console.log(this.state);
     this.setState({ [target.name]: target.value });
   }
 
@@ -85,6 +88,7 @@ class AddJob extends PureComponent {
 
 const mapDisptachToProps = dispatch =>({
   createJob(job) {
+    console.log('job in map disptach to props', job);
     dispatch(newJob(job));
   }
 });

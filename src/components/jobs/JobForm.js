@@ -12,14 +12,14 @@ function JobForm({ onChange, onSubmit, submitText, title, company, jobUrl, jobLo
       <input placeholder='description' name="jobDescriptionText" value={jobDescriptionText} onChange={onChange} />
       <input placeholder='salary' name="salary" value={salary} onChange={onChange} />
 
-      <select name='tracking' onChange={onChange}>
+      <select value={tracking} name='tracking' onChange={onChange}>
         {/* <option disabled selected *** is mad *** >application progress</option> */}
-        <option value={tracking} name="interested">Interested</option>
-        <option value={tracking} name="haveApplied">Applied</option>
-        <option value={tracking} name="phoneInterviewed">Phone Interviewed</option>
-        <option value={tracking} name="technicalInterviewed">Technical Interview</option>
-        <option value={tracking} name="inPersonInterviewed">In Person Interview</option>
-        <option value={tracking} name="jobOffer">Job Offer</option>
+        <option value="interested" name="interested">Interested</option>
+        <option value="haveApplied" name="haveApplied">Applied</option>
+        <option value="phoneInterviewed" name="phoneInterviewed">Phone Interviewed</option>
+        <option value="technicalInterviewed" name="technicalInterviewed">Technical Interview</option>
+        <option value="inPersonInterviewed" name="inPersonInterviewed">In Person Interview</option>
+        <option value="jobOffer" name="jobOffer">Job Offer</option>
       </select>
 
       {/* <button>Add Job</button> */}

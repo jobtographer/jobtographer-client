@@ -16,10 +16,10 @@ import JobDetail from '../components/jobs/JobDetail';
 
 class EditJob extends PureComponent {
   static propTypes = {
-    editJob: PropTypes.func.isRequired,
+    editJob: PropTypes.func,
     
-    title: PropTypes.string.isRequired, 
-    company: PropTypes.string.isRequired, 
+    title: PropTypes.string, 
+    company: PropTypes.string, 
     jobUrl: PropTypes.string, 
     jobLocation: PropTypes.string,
     jobDescriptionText: PropTypes.string,

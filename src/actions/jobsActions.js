@@ -1,6 +1,7 @@
 import { createAction } from 'promise-middleware-redux';
 import { createJob, getJobs } from '../services/jobsApi';
 
+
 export const [
   newJob,
   NEW_JOB,
@@ -12,4 +13,3 @@ export const [
   FETCH_JOBS,
   FETCH_JOBS_PENDING
 ] = createAction('FETCH_JOBS', getJobs);
-

@@ -3,7 +3,9 @@ import PropTypes from 'prop-types';
 import Job from './Job';
 
 function Jobs({ jobs }) {
-  const jobList = jobs.map(job => (
+  console.log(jobs);
+  const jobList = jobs.map((job) => (
+    // <li key={index}>
     <li key={job._id}>
       <Job job={job} />
     </li>
