@@ -4,8 +4,7 @@ import AllJobs from '../containers/AllJobs';
 import NavBar from '../containers/banners/NavBar';
 import UserNav from '../containers/banners/UserNav';
 import Footer from '../containers/banners/Footer';
-import { AllJobsDisplay, StyledDashboard, GeneralFooter } from './dashboardStyledComponents';
-
+import { AllJobsDisplay, StyledDashboard } from './dashboardStyledComponents';
 
 export default function Dashboard() {
   return (
@@ -17,9 +16,7 @@ export default function Dashboard() {
       <AllJobsDisplay>
         <AllJobs />
       </AllJobsDisplay>
-      <GeneralFooter>
-        <Footer />
-      </GeneralFooter>
+      <Footer />
     </StyledDashboard>
   </>
   );

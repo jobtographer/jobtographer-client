@@ -92,7 +92,7 @@ class AddJob extends PureComponent {
   }
 }
 
-const mapDisptachToProps = dispatch =>({
+const mapDisptachToProps = dispatch => ({
   createJob(job) {
     console.log('job in map disptach to props', job);
     dispatch(newJob(job));

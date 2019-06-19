@@ -5,7 +5,6 @@ export const BackgroundDiv = styled.div`
   width: 100vw;
   height: 100vh;
   background-color: gainsboro;
-  z-index: -2;
 `;
 
 export const Form = styled.form`
@@ -52,6 +51,23 @@ export const Input = styled.input`
   }
 `;
 
+export const TextArea = styled.textarea`
+  display: inline-block;
+  color: purple;
+  font-size: .7em;
+  border-radius: 5px;
+  padding: 10px;
+  background: transparent;
+  border: none;
+  width: 50vw;
+  margin: auto;
+  margin-left: 20px;
+
+  :hover {
+    background-color: orange;
+  }
+`;
+
 export const TrackerSelect = styled.select`
   color: purple;
   font-size: .7em;
@@ -79,10 +95,10 @@ export const ImageStripe = styled.div`
   background-image: url("../../../assets/glow-hexagon-black-orange-white-gradient-1920x1080-c4-000000-ffffff-ff8c00-000000-l2-16-203-a-25-f-6.png");
   background-position: center;
   color: black;
+  width: 80vw;
   height: 25vh;
   position: fixed;
   top: 40vh;
   z-index: 1;
-  width: 100vw;
   background-color: black;
 `;
