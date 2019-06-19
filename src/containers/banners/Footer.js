@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 // import AboutUs from '../../components/AboutUs';
-import { GeneralFooter } from '../../components/dashboardStyledComponents';
+import { GeneralFooter } from './bannerStyledComponents';
 
 class Footer extends Component {
   render() {

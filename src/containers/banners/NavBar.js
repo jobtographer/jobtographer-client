@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Jobs from '../AllJobs';
-import { GeneralNavBar, Li1, Li2 } from '../../components/dashboardStyledComponents';
+import { GeneralNavBar, Li1, Li2 } from '../banners/bannerStyledComponents';
 
 class NavBar extends Component {
   static propTypes = {};
