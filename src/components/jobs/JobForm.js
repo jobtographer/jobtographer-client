@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { AddJobForm } from '../dashboardStyledComponents';
 
 function JobForm({ onChange, onSubmit, submitText, title, company, jobUrl, jobLocation, salary, jobDescriptionText, tracking,
   atitle,
@@ -10,7 +11,7 @@ function JobForm({ onChange, onSubmit, submitText, title, company, jobUrl, jobLo
   asalary
 }) {
   return (
-    <form onSubmit={onSubmit}>
+    <AddJobForm onSubmit={onSubmit}>
       <input placeholder={atitle} name="title" value={title} onChange={onChange} />
       <input placeholder={acompany} name="company" value={company} onChange={onChange} />
       <input placeholder={ajobUrl} name="jobUrl" value={jobUrl} onChange={onChange} />
@@ -30,7 +31,7 @@ function JobForm({ onChange, onSubmit, submitText, title, company, jobUrl, jobLo
 
       {/* <button>Add Job</button> */}
       <button>{submitText}</button>
-    </form>
+    </AddJobForm>
   );
 }
 

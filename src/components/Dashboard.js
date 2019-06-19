@@ -1,12 +1,32 @@
 import React from 'react';
 import AddJob from '../containers/AddJob';
 import AllJobs from '../containers/AllJobs';
+import NavBar from '../containers/banners/NavBar';
+import UserNav from '../containers/banners/UserNav';
+import Footer from '../containers/banners/Footer';
+import { AllJobsDisplay, StyledDashboard, GeneralFooter } from './dashboardStyledComponents';
+
 
 export default function Dashboard() {
   return (
   <>
-    <AddJob />
-    <AllJobs />
+    <StyledDashboard>
+      <section>
+        <NavBar />
+      </section>
+      <section>
+        <UserNav />
+      </section>
+      <section >
+        <AddJob />
+      </section>
+      <AllJobsDisplay>
+        <AllJobs />
+      </AllJobsDisplay>
+      <GeneralFooter>
+        <Footer />
+      </GeneralFooter>
+    </StyledDashboard>
   </>
   );
 }
