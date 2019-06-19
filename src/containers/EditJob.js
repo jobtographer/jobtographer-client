@@ -7,9 +7,11 @@ import {
   getJobDetailCompany, 
   getJobDetailJobUrl, 
   getJobDetailJobLocation, 
-  getJobDetailJobDesciptionText, 
+  getJobDetailJobDescriptionText, 
   getJobDetailSalary, 
-  getJobDetailTracking 
+  getJobDetailTracking,
+  getJobDetailResume,
+  getJobDetailCoverLetter 
 } from '../selectors/jobDetailSelectors';
 import { updateJobDetail } from '../actions/jobDetailActions';
 import JobDetail from '../components/jobs/JobDetail';
@@ -24,7 +26,9 @@ class EditJob extends PureComponent {
     jobLocation: PropTypes.string,
     jobDescriptionText: PropTypes.string,
     salary: PropTypes.string,
-    tracking: PropTypes.string
+    tracking: PropTypes.string,
+    resume: PropTypes.string,
+    coverLetter: PropTypes.string
   }
 
   state = {
@@ -34,7 +38,9 @@ class EditJob extends PureComponent {
     jobLocation: '', 
     jobDescriptionText: '', 
     salary: '',
-    tracking: ''
+    tracking: '',
+    resume: '',
+    coverLetter: '',
   }
 
   componentDidMount() {
@@ -45,6 +51,8 @@ class EditJob extends PureComponent {
       jobLocation: this.props.jobLocation, 
       jobDescriptionText: this.props.jobDescriptionText, 
       salary: this.props.salary,
+      resume: this.props.salary,
+      coverLetter: this.props.salary,
       tracking: this.props.tracking
     });
   }
@@ -58,7 +66,9 @@ class EditJob extends PureComponent {
       jobLocation,
       jobDescriptionText,
       salary,
-      tracking
+      tracking,
+      resume,
+      coverLetter
     } = this.state;
 
     this.props.editJob({ 
@@ -68,7 +78,9 @@ class EditJob extends PureComponent {
       jobLocation,
       jobDescriptionText,
       salary,
-      tracking
+      tracking,
+      resume,
+      coverLetter
     });
   }
 
@@ -84,14 +96,16 @@ class EditJob extends PureComponent {
       jobLocation,
       jobDescriptionText,
       salary,
-      tracking
+      tracking,
+      resume,
+      coverLetter
     } = this.state;
 
     return (
       <JobDetail
         onSubmit={this.handleSubmit} onChange={this.handleChange} 
         title={title} company={company} tracking={tracking}
-        jobUrl={jobUrl} jobLocation={jobLocation}
+        jobUrl={jobUrl} jobLocation={jobLocation} resume={resume} coverLetter={coverLetter}
         jobDescriptionText={jobDescriptionText} salary={salary} 
       />
     );
@@ -103,8 +117,10 @@ const mapStateToProps = state => ({
   company: getJobDetailCompany(state), 
   jobUrl: getJobDetailJobUrl(state), 
   jobLocation: getJobDetailJobLocation(state), 
-  jobDescriptionText: getJobDetailJobDesciptionText(state), 
+  jobDescriptionText: getJobDetailJobDescriptionText(state), 
   salary: getJobDetailSalary(state),
+  resume: getJobDetailResume(state),
+  coverLetter: getJobDetailCoverLetter(state),
   tracking: getJobDetailTracking(state)
 });
 

@@ -7,7 +7,7 @@ import {
   Button, ImageStripe
 } from './detailStyledComponents';
 
-function JobDetail({ onChange, onSubmit, title, company, jobUrl, jobLocation, salary, jobDescriptionText, tracking,
+function JobDetail({ onChange, onSubmit, title, company, jobUrl, jobLocation, salary, jobDescriptionText, tracking, resume, coverLetter
 }) {
   return (
     <>
@@ -39,6 +39,14 @@ function JobDetail({ onChange, onSubmit, title, company, jobUrl, jobLocation, sa
 
           <P>Salary |
             <Input placeholder={salary} name="salary" value={salary} onChange={onChange} />
+          </P>
+
+          <P>Resume |
+            <Input placeholder={resume} name="resume" value={resume} onChange={onChange} />
+          </P>
+
+          <P>Cover Letter |
+            <Input placeholder={coverLetter} name="coverLetter" value={coverLetter} onChange={onChange} />
           </P>
         
           <P>Job Progress Tracker |
@@ -75,6 +83,8 @@ JobDetail.propTypes = {
   salary: PropTypes.string,
   jobDescriptionText: PropTypes.string,
   tracking: PropTypes.string,
+  resume: PropTypes.string,
+  coverLetter: PropTypes.string
 };
 
 export default JobDetail;

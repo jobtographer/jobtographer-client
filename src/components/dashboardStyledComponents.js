@@ -114,6 +114,7 @@ export const UserNavBar = styled.section`
   a {
     color: white;
     text-decoration: none;
+    margin-bottom: 1rem;
   }
 `;
 
@@ -124,7 +125,7 @@ export const GeneralFooter = styled.footer`
   position: fixed;
   bottom: 0;
   width: 100vw;
-  
+
   font-size: 1.25em;
 `;
 
