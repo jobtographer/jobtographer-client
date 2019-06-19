@@ -13,7 +13,8 @@ function JobForm({ onChange, onSubmit, submitText, title, company, jobUrl, jobLo
       <input placeholder='salary' name="salary" value={salary} onChange={onChange} />
 
       <select value={tracking} name='tracking' onChange={onChange}>
-        {/* <option disabled selected *** is mad *** >application progress</option> */}
+        {/* <select defaultValue='DEFAULT' name='tracking' onChange={onChange}> */}
+        {/* <option value="DEFAULT" disabled>application progress</option> */}
         <option value="interested" name="interested">Interested</option>
         <option value="haveApplied" name="haveApplied">Applied</option>
         <option value="phoneInterviewed" name="phoneInterviewed">Phone Interviewed</option>
@@ -22,7 +23,6 @@ function JobForm({ onChange, onSubmit, submitText, title, company, jobUrl, jobLo
         <option value="jobOffer" name="jobOffer">Job Offer</option>
       </select>
 
-      {/* <button>Add Job</button> */}
       <button>{submitText}</button>
     </form>
   );

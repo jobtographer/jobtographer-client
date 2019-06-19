@@ -13,7 +13,6 @@ class JobById extends PureComponent {
     loading: PropTypes.bool
   }
 
-
   componentDidMount() {
     this.props.fetch();
   }

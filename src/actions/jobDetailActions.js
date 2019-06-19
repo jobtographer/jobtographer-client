@@ -3,10 +3,10 @@ import { createAction } from 'promise-middleware-redux';
 
 import { 
   get, 
-  // patch 
+  patch 
 } from '../services/request';
 const getJobById = id => get(`/api/v1/jobs/${id}`);
-// const updateJobById = job => patch(`/api/v1/jobs/${job._id}`, job);
+const updateJobById = job => patch(`/api/v1/jobs/${job._id}`, job);
 
 export const [
   fetchJobDetail,
@@ -18,4 +18,4 @@ export const [
   updateJobDetail,
   UPDATE_JOB_DETAIL,
   UPDATE_JOB_DETAIL_PENDING
-] = createAction('UPDATE_JOB_DETAIL', () => 'hi');
+] = createAction('UPDATE_JOB_DETAIL', updateJobById);
