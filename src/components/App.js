@@ -14,11 +14,11 @@ export default function App() {
   return (
     <Router>
       <Switch>
-        {/* <Route exact path="/" component={withSession(Dashboard)} /> */}
-        <Route exact path="/" component={Dashboard} />
+        <Route exact path="/" component={withSession(Dashboard)} />
+        {/* <Route exact path="/" component={Dashboard} /> */}
         <Route path="/callback" component={Callback} /> 
-        {/* <Route exact path="/:id" component={withSession(JobById)} /> */}
-        <Route path="/:id" component={JobById} />
+        {/* <Route path="/:id" component={JobById} /> */}
+        <Route exact path="/:id" component={withSession(JobById)} />
       </Switch>
     </Router>
   );

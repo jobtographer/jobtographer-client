@@ -2,7 +2,6 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
-import JobForm from '../components/jobs/JobForm';
 import { 
   getJobDetailTitle, 
   getJobDetailCompany, 
@@ -13,12 +12,14 @@ import {
   getJobDetailTracking 
 } from '../selectors/jobDetailSelectors';
 import { updateJobDetail } from '../actions/jobDetailActions';
+import JobDetail from '../components/jobs/JobDetail';
 
 class EditJob extends PureComponent {
   static propTypes = {
-    editJob: PropTypes.func.isRequired,
-    title: PropTypes.string.isRequired, 
-    company: PropTypes.string.isRequired, 
+    editJob: PropTypes.func,
+    
+    title: PropTypes.string, 
+    company: PropTypes.string, 
     jobUrl: PropTypes.string, 
     jobLocation: PropTypes.string,
     jobDescriptionText: PropTypes.string,
@@ -47,7 +48,8 @@ class EditJob extends PureComponent {
       tracking: this.props.tracking
     });
   }
-  handleSumbit = event => {
+
+  handleSubmit = event => {
     event.preventDefault();
     const { 
       title, 
@@ -68,17 +70,8 @@ class EditJob extends PureComponent {
       salary,
       tracking
     });
-
-    this.setState({ 
-      title: '', 
-      company: '', 
-      jobUrl: '', 
-      jobLocation: '', 
-      jobDescriptionText: '', 
-      salary: '',
-      tracking: ''
-    });
   }
+
   handleChange = ({ target }) => {
     this.setState({ [target.name]: target.value });
   }
@@ -95,7 +88,7 @@ class EditJob extends PureComponent {
     } = this.state;
 
     return (
-      <JobForm 
+      <JobDetail
         onSubmit={this.handleSubmit} onChange={this.handleChange} 
         title={title} company={company} tracking={tracking}
         jobUrl={jobUrl} jobLocation={jobLocation}
