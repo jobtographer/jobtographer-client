@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Form, H2, P, Input, TextArea, Button } from './notesStyledComponents';
+import { NoteFormCSS, H2, P, Input, TextArea, Button } from './notesStyledComponents';
 
 function NoteForm({ onChange, onSubmit, title, body }) {
   return (
-    <Form onSubmit={onSubmit}>
+    <NoteFormCSS onSubmit={onSubmit}>
       <H2>Add New Job Notes</H2>
       <P>Note Title |
         <Input placeholder='note title' name='title' value={title} onChange={onChange} />
@@ -13,7 +13,7 @@ function NoteForm({ onChange, onSubmit, title, body }) {
         <TextArea placeholder='type here' name='body' value={body} onChange={onChange}/>
       </P>
       <Button>Add Note</Button>
-    </Form>
+    </NoteFormCSS>
   );
 }
 

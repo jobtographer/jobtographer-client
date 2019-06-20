@@ -3,15 +3,16 @@ import styled from 'styled-components';
 export const BackgroundDiv = styled.div`
   display: flex;
   width: 100vw;
-  height: 100%;
-  padding-bottom: 5rem;
+  height: 100vh;
 
-  background-color: gainsboro;
 `;
 
 export const Form = styled.form`
   border: 3px solid black;
   width: 45vw;
+  height: 50vh;
+  scroll-behavior: auto;
+  overflow: scroll;
   margin: auto;
   padding: 3em;
   background-image: url("../../../assets/lucas-benjamin-729304-unsplash.jpg");
@@ -109,6 +110,7 @@ export const Button = styled.button`
   padding: 10px;
   float: right;
   margin: 5px;
+  width: 5rem;
 `;
 
 export const ImageStripe = styled.div`
