@@ -8,7 +8,7 @@ import EditJob from './EditJob';
 
 class JobById extends PureComponent {
   static propTypes = {
-    job: PropTypes.array,
+    job: PropTypes.object,
     fetch: PropTypes.func,
     loading: PropTypes.bool
   }

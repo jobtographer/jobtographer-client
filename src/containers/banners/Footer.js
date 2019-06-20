@@ -11,7 +11,7 @@ class FooterContainer extends Component {
         <Footer>
           <span>~ Footer here ~</span>
           <ul>
-            <li><Link to={AboutUs}><a>About Us</a></Link></li>
+            <li><Link to={'/aboutUs'}>About Us</Link></li>
           </ul>
         </Footer>
       </>

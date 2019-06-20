@@ -39,7 +39,7 @@ export const getNotes = () => {
       body: 'body 2',	
       job: '1',	
       author: 'JOHN',	
-      _id: '2000',	
+      _id: '2001',	
     }
   ]);	
 };
@@ -90,7 +90,7 @@ export const getJobs = () => {
       salary: '100k',	
       jobLocation: 'S Beaverton',	
       tracking: 'interested',	
-      _id: '2000',	
+      _id: '2001',	
       date: '12/23/1989'	
     },	
     {	
@@ -102,7 +102,7 @@ export const getJobs = () => {
       salary: '100k',	
       jobLocation: 'S Beaverton',	
       tracking: 'interested',	
-      _id: '2000',	
+      _id: '2002',	
       date: '12/23/1989'	
     },	
   ]);	
