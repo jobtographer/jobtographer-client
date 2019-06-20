@@ -9,7 +9,7 @@ import {
 import AllNotes from '../../containers/notes/AllNotes';
 import AddNote from '../../containers/notes/AddNote';
 import Footer from '../../containers/banners/Footer';
-import { UserNavBar } from '../dashboardStyledComponents';
+import { UserNavBar } from '../../containers/banners/bannerStyledComponents';
 
 function JobDetail({ onChange, onSubmit, title, company, jobUrl, jobLocation, salary, jobDescriptionText, tracking, resume, coverLetter
 }) {
