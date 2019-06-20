@@ -3,7 +3,7 @@ import {
   FETCH_JOB_DETAIL_PENDING,
   UPDATE_JOB_DETAIL,
   UPDATE_JOB_DETAIL_PENDING
-} from '../actions/jobDetailActions';
+} from '../actions/constants/jobDetailConstants';
 
 const initialState = {
   loading: true,

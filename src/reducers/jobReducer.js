@@ -3,7 +3,7 @@ import {
   NEW_JOB_PENDING,
   FETCH_JOBS,
   FETCH_JOBS_PENDING
-} from '../actions/jobsActions';
+} from '../actions/constants/jobsConstants';
 
 const initialState = {
   loading: false,
