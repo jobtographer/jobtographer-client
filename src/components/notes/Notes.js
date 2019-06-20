@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Note from './Note';
+import { AddNotesDiv, NoteUl, H2  } from '../notes/notesStyledComponents';
 
 function Notes({ notes }) {
   const noteList = notes.map(note => (
@@ -9,11 +10,12 @@ function Notes({ notes }) {
     </li>
   ));
   return (
-    <div>
-      <ul>
+    <AddNotesDiv>
+      <NoteUl>
+        <H2>Notes</H2>
         {noteList}
-      </ul>
-    </div>
+      </NoteUl>
+    </AddNotesDiv>
   );
 }
 

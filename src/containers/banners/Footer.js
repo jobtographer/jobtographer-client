@@ -13,7 +13,6 @@ class FooterContainer extends Component {
           <ul>
             <li><Link to={AboutUs}><a>About Us</a></Link></li>
           </ul>
-
         </Footer>
       </>
     );
