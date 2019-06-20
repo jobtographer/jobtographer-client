@@ -3,7 +3,7 @@ import React from 'react';
 // import AllJobs from '../containers/AllJobs';
 
 //-------- UNDO DASHBOARD CHANGES -----\\
-import LandingPage from '../containers/landing/LandingPage';
+import LandingPage from './landing/LandingPage';
 export default function Dashboard() {
   return (
   <>

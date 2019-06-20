@@ -37,11 +37,11 @@
   }
 
 }
-
 .section2 {
   box-sizing: border-box;
   width: 50vw;
   background: orange;
+  border: rgb(240, 132, 0);
 
   img {
     width: 7.5rem;
