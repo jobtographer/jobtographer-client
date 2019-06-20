@@ -11,7 +11,7 @@ class NavBar extends Component {
         <GeneralNavBar >
           <ul>
             <Li1><Link to={Jobs}>Jobs</Link></Li1>
-            <Li2><Link to={Jobs}>Jobs</Link></Li2>
+            <Li2><Link to={Jobs}>RESUME</Link></Li2>
           </ul>
           <img src='../../assets/Logo.png'></img>
         </GeneralNavBar>

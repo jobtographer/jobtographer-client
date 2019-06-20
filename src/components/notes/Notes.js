@@ -14,6 +14,7 @@ function Notes({ notes }) {
       <NoteUl>
         <H2>Notes</H2>
         {noteList}
+        {noteList}
       </NoteUl>
     </AddNotesDiv>
   );

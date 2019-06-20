@@ -23,7 +23,7 @@ const getNotes = () => {
     },	
     {	
       title: 'Note 2',	
-      body: 'body 2',	
+      body: 'loasljaslkasljkask;jsadsadl;kl kdsjklsdfljksdfljksjlsdlfkjflskjflkdsjflk  sdjflkjdsflkjdsflkjsdlfksjldklsdjls   dljslkfsjlkfslkfsdljfsdlkkljsdflsdsd ljksdflkjsdljksdfjlksdfjlklsjkljkfsdljksdfl jjsfljlksfdljskldfjsfdjlkjlksfdjfsjkljlkfsdj jsfdjsfkldjjkdfshjeksdflhdfsvhjkbendfsjvhjkb wenfsdhjkfbnesdhjkbndsjhjkbnfdshjkbefsdhjkb nelsdhjkbnsdhkjbenljsdhdjkbsnljhjdkblndhjksbd nlfhjskbdfnfhjkdsb',	
       job: '1',	
       author: 'JOHN',	
       _id: '2001',	

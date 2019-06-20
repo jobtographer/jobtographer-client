@@ -5,8 +5,6 @@ export const GeneralNavBar = styled.section`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 2px solid darkorange;
-  background-color: #FF9505;
   font-size: 2em;
 
   img {
@@ -37,6 +35,7 @@ export const UserNavBar = styled.section`
   justify-content: space-between;
   align-items: center;
   position: fixed;
+  left: 0;
   bottom: 0;
   background: black;
   clip-path: polygon(0% 0%, 100% 20%, 100% 100%, 0% 100%);
@@ -62,7 +61,6 @@ export const Footer = styled.footer`
   justify-content: center;
   position: fixed;
   bottom: 0;
-  background: black;
   font-size: 1.25em;
   width: 100vw;
   height: .45rem;

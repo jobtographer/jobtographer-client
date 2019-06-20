@@ -5,6 +5,7 @@ export const NoteFormCSS = styled.form`
   border: .1rem solid black;
   width: 25vw;
   padding: 1em;
+  margin: .5rem;
   background-image: url("../../../assets/concrete.jpg");
   border-radius: 20px;
   margin-right: 3em;
@@ -14,7 +15,7 @@ export const NoteFormCSS = styled.form`
 `;
 
 export const P  = styled.p`
-  font-size: 2em;
+  font-size: 1.5em;
   background: white;
   opacity: .8;
   border-radius: .22rem;
@@ -54,40 +55,45 @@ export const Button = styled.button`
   background: white;
   margin: .5rem;
   padding: .7rem;
-  width: 5rem;
+  font-size: 1em;
 `;
 
 export const AddNotesDiv = styled.div`
   border: .1rem solid black;
-  width: 25vw;
   border-radius: 1.5rem;
+  width: 25vw;
+  height: 28vh;
+  padding: 1em;
   margin: .5rem;
   background-image: url("../../../assets/concrete1.jpg");
-  z-index: 5;
   overflow: scroll;
   display: flex;
   justify-content: center;
+  align-items: center;
 `;
 
 export const NoteUl = styled.ul`
   list-style-type: none;
   display: flex;
   flex-direction: column;
-  padding: 1rem 0;
+  padding: 0;
+
   `;
 
 export const H2 = styled.h2`
   color: white;
   text-align: center;
+  
   font-size: 2em;
 `;
 
 export const NoteLi = styled.li`
   margin: .5rem 0;
+
   `;
 
 export const NoteDiv = styled.div`
-  width: 20vw;
+  width: 24vw;
   background: white;
   opacity: .8;
   border-radius: .22rem;
@@ -96,5 +102,6 @@ export const NoteDiv = styled.div`
   
   h3, p {
     padding: .5rem;
+    flex-wrap: wrap;
   }
 `;

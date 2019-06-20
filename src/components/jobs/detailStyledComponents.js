@@ -1,45 +1,55 @@
 import styled from 'styled-components';
 
-export const BackgroundDiv = styled.div`
-  display: flex;
+export const PageContainer = styled.div`
+  background-image: url('../../../assets/orange1.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
   width: 100vw;
   height: 100vh;
+  padding: 0;
+  margin: 0;
 
+`;
+export const BackgroundDiv = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 `;
 
 export const Form = styled.form`
-  border: 3px solid black;
-  width: 45vw;
-  height: 50vh;
-  scroll-behavior: auto;
+  background-image: url("../../../assets/concrete1.jpg");
+  width: 35vw;
+  height: 61vh;
   overflow: scroll;
-  margin: auto;
-  padding: 3em;
-  background-image: url("../../../assets/lucas-benjamin-729304-unsplash.jpg");
   border-radius: 20px;
-  z-index: 5;
+  border: .1rem solid;
+  margin: .5rem;
+  padding: 3em;
 `;
 
 export const H1 = styled.h1`
   text-align: center;
-`;
+  color: white;
+  `;
 
 export const H5 = styled.h5`
-  font-size: 1.5em;
+  color: white;
+  opacity: .8;
+  font-size: 1em;
   text-align: center;
 `;
 
 export const P  = styled.p`
-  font-size: 2em;
-  background-color: lightgray;
-  border-radius: 20px;
+  background-color: white;
+  opacity: .8;
+  font-size: 1.5em;
+  border-radius: .22rem;
+  margin: .5rem;
   padding: 10px;
-  border: 1px solid black;
 `;
 
 export const Input = styled.input`
   display: inline-block;
-  color: purple;
   font-size: .7em;
   border-radius: 5px;
   padding: 10px;
@@ -56,7 +66,6 @@ export const Input = styled.input`
 
 export const DescriptionTextarea = styled.textarea`
   display: inline-block;
-  color: purple;
   font-size: .7em;
   border-radius: 5px;
   padding: 10px;
@@ -74,7 +83,6 @@ export const DescriptionTextarea = styled.textarea`
 
 export const TextArea = styled.textarea`
   display: inline-block;
-  color: purple;
   font-size: .7em;
   border-radius: 5px;
   padding: 10px;
@@ -90,7 +98,6 @@ export const TextArea = styled.textarea`
 `;
 
 export const TrackerSelect = styled.select`
-  color: purple;
   font-size: .7em;
   display: inline-block;
   margin-left: 1.5rem;
@@ -106,11 +113,12 @@ export const TrackerSelect = styled.select`
 
 export const Button = styled.button`
   border-radius: 5px;
-  background-color: lightgray;
+  background: white;
   padding: 10px;
   float: right;
+  font-size: 1em;
   margin: 5px;
-  width: 5rem;
+  padding: 1rem;
 `;
 
 export const ImageStripe = styled.div`
