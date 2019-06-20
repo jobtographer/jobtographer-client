@@ -2,6 +2,7 @@ const HtmlPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const DotEnv = require('dotenv-webpack');
+const CircularDependencyPlugin = require('circular-dependency-plugin');
 
 // eslint-disable-next-line
 module.exports = {
@@ -20,7 +21,12 @@ module.exports = {
     new DotEnv({ systemvars: true }),
     new CopyPlugin([
       { from: 'public' }
-    ])
+    ]),
+    new CircularDependencyPlugin({
+      exclude: /a\.js|node_modules/,
+      failOnError: false,
+      cwd: process.cwd(),
+    })
   ],
   module: {
     rules: [

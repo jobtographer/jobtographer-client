@@ -3,10 +3,13 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { newNote } from '../../actions/notesActions';
 import NoteForm from '../../components/notes/NoteForm';
+import { withRouter } from 'react-router-dom';
+
 
 class AddNote extends PureComponent {
   static propTypes = {
-    createNote: PropTypes.func.isRequired
+    createNote: PropTypes.func.isRequired,
+    match: PropTypes.object.isRequired
   }
 
   state = {
@@ -16,9 +19,9 @@ class AddNote extends PureComponent {
 
   handleSubmit = event => {
     event.preventDefault();
+    const jobId = this.props.match.params.id;
     const { title, body } = this.state;
-
-    this.props.createNote({ title, body });
+    this.props.createNote({ title, body, job: jobId });
 
     this.setState({ 
       title: '',
@@ -40,13 +43,13 @@ class AddNote extends PureComponent {
   }
 }
 
-const mapDispatchToProps = dispatch => ({
+const mapDispatchToProps = (dispatch) => ({
   createNote(note) {
     dispatch(newNote(note));
   }
 });
 
-export default connect(
+export default withRouter(connect(
   null,
   mapDispatchToProps
-)(AddNote);
+)(AddNote));

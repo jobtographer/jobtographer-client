@@ -15,7 +15,7 @@ class AddJob extends PureComponent {
     jobLocation: '',
     jobDescriptionText: '',
     salary: '',
-    tracking: '',
+    tracking: 'interested',
     resume: '',
     coverLetter: ''
   }
@@ -63,7 +63,6 @@ class AddJob extends PureComponent {
   }
 
   handleChange = ({ target }) => {
-    console.log(this.state);
     this.setState({ [target.name]: target.value });
   }
 

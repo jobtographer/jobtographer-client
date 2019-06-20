@@ -4,12 +4,13 @@ import { connect } from 'react-redux';
 import Notes from '../../components/notes/Notes';
 import { fetchNotes } from '../../actions/notesActions';
 import { getNotesLoadingSelector, getNotesSelector } from '../../selectors/noteSelectors';
-
+import { withRouter } from 'react-router-dom';
 class AllNotes extends PureComponent {
   static propTypes = {
     notes: PropTypes.array.isRequired,
     loading: PropTypes.bool.isRequired,
-    fetch: PropTypes.func.isRequired
+    fetch: PropTypes.func.isRequired,
+    match: PropTypes.object.isRequired
   }
 
   componentDidMount() {
@@ -34,13 +35,13 @@ const mapStateToProps = state => ({
   loading: getNotesLoadingSelector(state)
 });
   
-const mapDispatchToProps = dispatch => ({
+const mapDispatchToProps = (dispatch, { match }) => ({
   fetch() {
-    dispatch(fetchNotes());
+    dispatch(fetchNotes(match.params.id));
   }
 });
   
-export default connect(
+export default withRouter(connect(
   mapStateToProps,
   mapDispatchToProps
-)(AllNotes);
+)(AllNotes));

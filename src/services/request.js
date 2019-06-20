@@ -1,5 +1,5 @@
-import store from '../store';
 import { getToken } from '../selectors/sessionSelector';
+import store from '../store';
 
 const request = (path, method, body) => {
   return fetch(`${process.env.API_URL}${path}`, {
@@ -13,7 +13,6 @@ const request = (path, method, body) => {
     .then(res => ([res.ok, res.json()]))
     .then(([ok, json]) => {
       if(!ok) throw 'failed to post to API';
-
       return json;
     });
 };
