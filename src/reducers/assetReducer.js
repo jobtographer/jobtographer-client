@@ -1,4 +1,3 @@
-import { NEW_ASSET, FETCH_ASSETS } from '../actions/constants';
 import { 
   NEW_RESUME, 
   NEW_COVER_LETTER, 
@@ -16,7 +15,7 @@ const initialState = {
   loading: false
 };
 
-export function assetReducer(state = initialState, action) {
+export default function assetReducer(state = initialState, action) {
   switch(action.type) {
     case NEW_RESUME:
       return { ...state, loading: false, resumes: [...state.resumes, action.payload] };
@@ -31,7 +30,7 @@ export function assetReducer(state = initialState, action) {
       return { ...state, loading: true };
 
     case NEW_COVER_LETTER: 
-      return { ...state, loading: false, coverLetters: [...state.coverLetters, action.payload]};
+      return { ...state, loading: false, coverLetters: [...state.coverLetters, action.payload] };
 
     case NEW_COVER_LETTER_PENDING: 
       return { ...state, loading: true };

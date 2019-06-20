@@ -77,5 +77,4 @@ describe('JOB DETAIL REDUCER TEST', () => {
       detail: {}
     });
   });
-
 });
