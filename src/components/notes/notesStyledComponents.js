@@ -9,6 +9,8 @@ export const Form = styled.form`
   background-image: url("../../../assets/lucas-benjamin-729304-unsplash.jpg");
   border-radius: 20px;
   z-index: 5;
+  margin-right: 3em;
+  /* display: flex; */
 `;
 
 export const P  = styled.p`
@@ -71,10 +73,13 @@ export const AddNotesDiv = styled.div`
   border: 3px solid black;
   width: 25vw;
   margin: auto;
+  margin-right: 3em;
+  margin-top: 5em;
   padding: 3em;
   background-image: url("../../../assets/lucas-benjamin-729304-unsplash.jpg");
   border-radius: 20px;
   z-index: 5;
+  display: flex;
 `;
 
 export const NoteDiv = styled.div`
@@ -83,11 +88,12 @@ export const NoteDiv = styled.div`
   border: 3px solid black;
   border-radius: 20px;
   min-height: 5em;
-  margin: 5px;
-  padding: 3px;
+  /* margin: 5px;
+  padding: 4px; */
 `;
 
 export const NoteUl = styled.ul`
   list-style-type: none;
-
+  display: flex;
+  flex-direction: column;
 `;

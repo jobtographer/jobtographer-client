@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { 
   BackgroundDiv, Form, 
-  P, Input,
+  P, Input, DescriptionTextarea,
   TrackerSelect, H5, H1,
   Button, ImageStripe
 } from './detailStyledComponents';
@@ -18,7 +18,7 @@ function JobDetail({ onChange, onSubmit, title, company, jobUrl, jobLocation, sa
       <UserNavBar />
       {/* <ImageStripe></ImageStripe> */}
       <Form onSubmit={onSubmit}>
-        <H1>Details for {title} </H1>
+        <H1>Overview for {title} </H1>
         <H5>edit sections and click update to save changes</H5>
         <P>Title |
           <Input placeholder={title} name="title" value={title} onChange={onChange} />
@@ -37,7 +37,7 @@ function JobDetail({ onChange, onSubmit, title, company, jobUrl, jobLocation, sa
         </P>
 
         <P>Job Description |
-          <Input placeholder={jobDescriptionText} name="jobDescriptionText" value={jobDescriptionText} onChange={onChange} />
+          <DescriptionTextarea placeholder={jobDescriptionText} name="jobDescriptionText" value={jobDescriptionText} onChange={onChange} />
         </P>
 
         <P>Salary |

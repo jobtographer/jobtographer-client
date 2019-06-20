@@ -7,7 +7,7 @@ function NoteForm({ onChange, onSubmit, title, body }) {
     <Form onSubmit={onSubmit}>
       <H2>Add New Job Notes</H2>
       <P>Note Title |
-        <Input placeholder='title' name='title' value={title} onChange={onChange} />
+        <Input placeholder='note title' name='title' value={title} onChange={onChange} />
       </P>
       <P>Note Text |
         <TextArea placeholder='type here' name='body' value={body} onChange={onChange}/>

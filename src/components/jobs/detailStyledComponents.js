@@ -3,13 +3,15 @@ import styled from 'styled-components';
 export const BackgroundDiv = styled.div`
   display: flex;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
+  padding-bottom: 5rem;
+
   background-color: gainsboro;
 `;
 
 export const Form = styled.form`
   border: 3px solid black;
-  width: 50vw;
+  width: 45vw;
   margin: auto;
   padding: 3em;
   background-image: url("../../../assets/lucas-benjamin-729304-unsplash.jpg");
@@ -45,6 +47,24 @@ export const Input = styled.input`
   width: 30vw;
   margin: auto;
   margin-left: 20px;
+
+  :hover {
+    background-color: orange;
+  }
+`;
+
+export const DescriptionTextarea = styled.textarea`
+  display: inline-block;
+  color: purple;
+  font-size: .7em;
+  border-radius: 5px;
+  padding: 10px;
+  background: transparent;
+  border: none;
+  width: 35vw;
+  margin: auto;
+  margin-left: 20px;
+  height: 7em;
 
   :hover {
     background-color: orange;
