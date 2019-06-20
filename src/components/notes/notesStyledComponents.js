@@ -2,16 +2,24 @@ import styled from 'styled-components';
 
 
 export const NoteFormCSS = styled.form`
-  border: .1rem solid black;
-  width: 25vw;
-  padding: 1em;
-  margin: .5rem;
-  background-image: url("../../../assets/concrete.jpg");
-  border-radius: 20px;
-  margin-right: 3em;
   display: flex;
   justify-content: center;
   flex-direction: column;
+
+  background-image: url("../../../assets/concrete1.jpg");
+  width: 25vw;
+  border: .1rem solid black;
+  border-radius: .3rem;
+  padding: 1em;
+  margin: .5rem;
+  margin-right: 3em;
+`;
+
+export const ScrollForm  = styled.div`
+  height: 85%;
+  width: 100%;
+  overflow: scroll;
+  margin-bottom: .3rem;
 `;
 
 export const P  = styled.p`
@@ -41,11 +49,12 @@ export const TextArea = styled.textarea`
   padding: 10px;
   background: transparent;
   border: none;
-  width: 20vw;
+  width: 22vw;
+  resize: vertical;
   margin: auto;
 
   :hover {
-    background-color: orange;
+    background: rgba(240, 240, 240, 0.838);
   }
 `;
 
@@ -56,17 +65,22 @@ export const Button = styled.button`
   margin: .5rem;
   padding: .7rem;
   font-size: 1em;
+
+  :hover {
+    opacity: .7;
+    transform: scale(1.01);
+  }
 `;
 
 export const AddNotesDiv = styled.div`
   border: .1rem solid black;
-  border-radius: 1.5rem;
+  border-radius: .3rem;
   width: 25vw;
   height: 28vh;
   padding: 1em;
   margin: .5rem;
   background-image: url("../../../assets/concrete1.jpg");
-  overflow: scroll;
+  overflow-y: scroll;
   display: flex;
   justify-content: center;
   align-items: center;

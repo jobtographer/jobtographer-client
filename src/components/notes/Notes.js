@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Note from './Note';
-import { AddNotesDiv, NoteUl, NoteLi, H2  } from '../notes/notesStyledComponents';
+import { AddNotesDiv, NoteUl, NoteLi, H2, ScrollForm  } from '../notes/notesStyledComponents';
 
 function Notes({ notes }) {
   const noteList = notes.map(note => (
@@ -13,8 +13,10 @@ function Notes({ notes }) {
     <AddNotesDiv>
       <NoteUl>
         <H2>Notes</H2>
-        {noteList}
-        {noteList}
+        <ScrollForm>
+          {noteList}
+          {noteList}
+        </ScrollForm>
       </NoteUl>
     </AddNotesDiv>
   );

@@ -6,6 +6,11 @@ export const GeneralNavBar = styled.section`
   justify-content: space-between;
   align-items: center;
   font-size: 2em;
+   a {
+    color: white;
+    font-size: .5em;
+    text-decoration: none;
+  }
 
   img {
     border: solid orange .25rem;
