@@ -1,4 +1,4 @@
-import { NEW_NOTE, NEW_NOTE_PENDING, FETCH_NOTES, FETCH_NOTES_PENDING } from '../actions/notesActions';
+import { NEW_NOTE, NEW_NOTE_PENDING, FETCH_NOTES, FETCH_NOTES_PENDING } from '../actions/constants/notesConstants';
 
 const initialState = {
   loading: false,
