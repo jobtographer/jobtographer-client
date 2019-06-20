@@ -35,28 +35,34 @@ export const UserNavBar = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  float: left;
-  width: 10rem;
-  height: 500px;
-  margin-top: 2rem;
-  border: 2px dashed grey;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  background: black;
+  clip-path: polygon(0% 0%, 100% 20%, 100% 100%, 0% 100%);
+  width: 4rem;
+  height: 50vh;
 
   img {
-    width: 100px;
-    height: 100px;
+    width: 2.5rem;
+    height: 2.5rem;
     border-radius: 100%;
-    margin-left: 2rem;
-    margin-top: 1.5rem;
+    margin-top: 6rem;
   }
+  a {
+    color: white;
+    margin-bottom: 1rem;
+    text-decoration: none;
+    :hover { color: red; }
+  }	
 `;
 
 export const Footer = styled.footer`
   display: flex;
-  position: relative;
-  top: 150px;
-  width: 100%;
+  justify-content: center;
+  position: fixed;
+  bottom: 0;
   font-size: 1.25em;
   width: 100vw;
-  margin: 2rem;
   padding: 1.25rem;
 `;
