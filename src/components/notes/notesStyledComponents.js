@@ -1,99 +1,123 @@
 import styled from 'styled-components';
 
 
-export const Form = styled.form`
-  border: 3px solid black;
+export const NoteFormCSS = styled.form`
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  background-image: url("../../../assets/concrete1.jpg");
   width: 25vw;
-  margin: auto;
-  padding: 3em;
-  background-image: url("../../../assets/lucas-benjamin-729304-unsplash.jpg");
-  border-radius: 20px;
-  z-index: 5;
+  border: .1rem solid black;
+  border-radius: .3rem;
+  padding: 1em;
+  margin: .5rem;
   margin-right: 3em;
-  /* display: flex; */
+`;
+
+export const ScrollForm  = styled.div`
+  height: 85%;
+  width: 100%;
+  overflow: scroll;
+  margin-bottom: .3rem;
 `;
 
 export const P  = styled.p`
-  display: inline-block;
-  font-size: 2em;
-  background-color: lightgray;
-  border-radius: 20px;
+  font-size: 1.5em;
+  background: white;
+  opacity: .8;
+  border-radius: .22rem;
   padding: 10px;
-  border: 1px solid black;
+  margin: .5rem;
 `;
 
 export const Input = styled.input`
-  display: inline-block;
-  color: purple;
   font-size: .7em;
-  border-radius: 5px;
-  padding: 10px;
+  border-radius: .22rem;
   background: transparent;
   border: none;
   width: 20vw;
-  margin: auto;
-  margin-left: 20px;
 
   :hover {
-    background-color: orange;
+    background: rgba(240, 240, 240, 0.838);
   }
 `;
 
-export const H2 = styled.h2`
-  text-align: center;
-  font-size: 2em;
-`;
-
 export const TextArea = styled.textarea`
-  display: inline-block;
-  color: purple;
   font-size: .7em;
   border-radius: 5px;
   padding: 10px;
   background: transparent;
   border: none;
-  width: 20vw;
+  width: 22vw;
+  resize: vertical;
   margin: auto;
-  margin-left: 20px;
 
   :hover {
-    background-color: orange;
+    background: rgba(240, 240, 240, 0.838);
   }
 `;
 
 export const Button = styled.button`
+  align-self: flex-end;
   border-radius: 5px;
-  background-color: lightgray;
-  padding: 10px;
-  float: right;
-  margin: 5px;
+  background: white;
+  margin: .5rem;
+  padding: .7rem;
+  font-size: 1em;
+
+  :hover {
+    opacity: .7;
+    transform: scale(1.01);
+  }
 `;
 
 export const AddNotesDiv = styled.div`
-  border: 3px solid black;
+  border: .1rem solid black;
+  border-radius: .3rem;
   width: 25vw;
-  margin: auto;
-  margin-right: 3em;
-  margin-top: 5em;
-  padding: 3em;
-  background-image: url("../../../assets/lucas-benjamin-729304-unsplash.jpg");
-  border-radius: 20px;
-  z-index: 5;
+  height: 28vh;
+  padding: 1em;
+  margin: .5rem;
+  background-image: url("../../../assets/concrete1.jpg");
+  overflow-y: scroll;
   display: flex;
-`;
-
-export const NoteDiv = styled.div`
-  border: 2px solid black;
-  background: lightgray;
-  border: 3px solid black;
-  border-radius: 20px;
-  min-height: 5em;
-  /* margin: 5px;
-  padding: 4px; */
+  justify-content: center;
+  align-items: center;
 `;
 
 export const NoteUl = styled.ul`
   list-style-type: none;
   display: flex;
   flex-direction: column;
+  padding: 0;
+  margin: 0rem;
+  height: 100%;
+
+  `;
+
+export const H2 = styled.h2`
+  color: white;
+  text-align: center;
+  
+  font-size: 2em;
+`;
+
+export const NoteLi = styled.li`
+  margin: .5rem 0;
+
+  `;
+
+export const NoteDiv = styled.div`
+  width: 24vw;
+  background: white;
+  opacity: .8;
+  border-radius: .22rem;
+  min-height: 5em;
+  margin: .5rem;
+  
+  h3, p {
+    padding: .5rem;
+    flex-wrap: wrap;
+  }
 `;

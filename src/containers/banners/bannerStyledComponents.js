@@ -5,9 +5,13 @@ export const GeneralNavBar = styled.section`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 2px solid darkorange;
-  background-color: #FF9505;
   font-size: 2em;
+  color: white;
+   a {
+    color: white;
+    font-size: .5em;
+    text-decoration: none;
+  }
 
   img {
     border: solid orange .25rem;
@@ -18,17 +22,41 @@ export const GeneralNavBar = styled.section`
   }
 `;
 
+export const WhiteBackground = styled.div`
+  background-image: url('../../../assets/white.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 25vw;
+  height: 25%;
+  transform: rotate(35deg) translate(-5rem);
+
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  z-index: -101;
+`;
+
 export const Li1 = styled.li`
+  margin: 1rem;
+  margin-left: 50px;
+  p {
+    color: white;
+  }
   a:hover {
     color: white;
   }
-  margin: 1rem;
-  margin-left: 50px;
-`;
+  `;
 
 export const Li2 = styled.li`
   margin: 1rem;
   margin-left: 50px;
+  color: white;
+  p {
+    color: white;
+  }
+  a:hover {
+    color: white;
+  }
 `;
 
 export const UserNavBar = styled.section`
@@ -37,6 +65,7 @@ export const UserNavBar = styled.section`
   justify-content: space-between;
   align-items: center;
   position: fixed;
+  left: 0;
   bottom: 0;
   background: black;
   clip-path: polygon(0% 0%, 100% 20%, 100% 100%, 0% 100%);
@@ -62,7 +91,6 @@ export const Footer = styled.footer`
   justify-content: center;
   position: fixed;
   bottom: 0;
-  background: black;
   font-size: 1.25em;
   width: 100vw;
   height: .45rem;
