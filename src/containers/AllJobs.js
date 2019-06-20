@@ -2,14 +2,15 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Jobs from '../components/jobs/Jobs';
-import { fetchJobs } from '../actions/jobsActions';
+import { fetchJobs, removeJob } from '../actions/jobsActions';
 import { getJobsSelector, getJobsLoadingSelector } from '../selectors/jobSelectors';
 
 class AllJobs extends PureComponent {
   static propTypes = {
     jobs: PropTypes.array.isRequired,
     loading: PropTypes.bool.isRequired,
-    fetch: PropTypes.func.isRequired
+    fetch: PropTypes.func.isRequired,
+    delete: PropTypes.func.isRequired
   }
 
   componentDidMount() {
@@ -26,7 +27,7 @@ class AllJobs extends PureComponent {
     const { loading, jobs } = this.props;
     if(loading) return <h1>loading...</h1>;
 
-    return <Jobs jobs={jobs} />;
+    return <Jobs jobs={jobs} deleteJob={this.props.delete} />;
   }
 }
 
@@ -35,9 +36,13 @@ const mapStateToProps = state => ({
   loading: getJobsLoadingSelector(state)
 });
 
-const mapDispatchToProps = dispatch => ({
+const mapDispatchToProps = (dispatch) => ({
   fetch() {
     dispatch(fetchJobs());
+  },
+  delete(jobId) {
+    console.log('jobId', jobId);
+    dispatch(removeJob(jobId));
   }
 });
 

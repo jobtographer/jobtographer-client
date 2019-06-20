@@ -2,7 +2,9 @@ import {
   NEW_JOB,
   NEW_JOB_PENDING,
   FETCH_JOBS,
-  FETCH_JOBS_PENDING
+  FETCH_JOBS_PENDING,
+  DELETE_JOB,
+  DELETE_JOB_PENDING
 } from '../actions/constants/jobsConstants';
 
 const initialState = {
@@ -19,6 +21,10 @@ export default function reducer(state = initialState, action) {
     case FETCH_JOBS:
       return { ...state, loading: false, jobsList: action.payload };
     case FETCH_JOBS_PENDING:
+      return { ...state, loading: true };
+    case DELETE_JOB:
+      return { ...state, loading: false, jobsList: [...state.jobsList.filter(job => job._id !== action.payload._id)] };
+    case DELETE_JOB_PENDING:
       return { ...state, loading: true };
     default:
       return state;

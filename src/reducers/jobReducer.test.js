@@ -71,4 +71,32 @@ describe('job reducer', ()=>{
       jobsList: []
     });
   });
+  it('handles the DELETE_JOB action', () => {
+    const initialState = {
+      loading: false,
+      jobsList: [
+        { _id: '12345',
+          title: 'the title',
+        },
+        {
+          _id: '678900',
+          title: 'title2'
+        }
+      ]
+    };
+    const finalState = {
+      loading: false,
+      jobsList: [
+        {
+          _id: '678900',
+          title: 'title2'
+        }
+      ]
+    };
+    const newState = reducer(initialState, {
+      type: 'DELETE_JOB',
+      payload: { _id: '12345' }
+    });
+    expect(newState).toEqual(finalState) ;
+  });
 });

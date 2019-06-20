@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Job from './Job';
 
-function Jobs({ jobs }) {
+function Jobs({ jobs, deleteJob }) {
   const jobList = jobs.map((job) => (
     <li key={job._id}>
-      <Job job={job} />
+      <Job job={job} deleteJob={deleteJob} />
     </li>
   ));
   return (
@@ -18,7 +18,8 @@ function Jobs({ jobs }) {
 }
 
 Jobs.propTypes = {
-  jobs: PropTypes.arrayOf(PropTypes.object).isRequired
+  jobs: PropTypes.arrayOf(PropTypes.object).isRequired,
+  deleteJob: PropTypes.func.isRequired
 };
 
 export default Jobs;
