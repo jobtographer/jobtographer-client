@@ -1,10 +1,13 @@
 import { createAction } from 'promise-middleware-redux';
-import { 
-  get, 
-  patch 
-} from '../services/request';
-const getJobById = id => get(`/api/v1/jobs/${id}`);
-const updateJobById = job => patch(`/api/v1/jobs/${job._id}`, job);
+import { getJobById, updateJobById } from '../services/jobsApi';
+
+export const [
+  fetchJobDetail,
+] = createAction('FETCH_JOB_DETAIL', getJobById);
+
+export const [
+  updateJobDetail,
+] = createAction('UPDATE_JOB_DETAIL', updateJobById);	
 
 // const getJobById = () => {	
 //   return Promise.resolve(	
@@ -22,15 +25,3 @@ const updateJobById = job => patch(`/api/v1/jobs/${job._id}`, job);
 //     }	
 //   );	
 // };
-
-export const [
-  fetchJobDetail,
-  FETCH_JOB_DETAIL,
-  FETCH_JOB_DETAIL_PENDING
-] = createAction('FETCH_JOB_DETAIL', getJobById);
-
-export const [
-  updateJobDetail,
-  UPDATE_JOB_DETAIL,
-  UPDATE_JOB_DETAIL_PENDING
-] = createAction('UPDATE_JOB_DETAIL', updateJobById);	
