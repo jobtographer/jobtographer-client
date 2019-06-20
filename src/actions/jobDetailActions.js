@@ -1,27 +1,43 @@
 import { createAction } from 'promise-middleware-redux';
-import { 
-  get, 
-  patch 
-} from '../services/request';
-const getJobById = id => get(`/api/v1/jobs/${id}`);
-const updateJobById = job => patch(`/api/v1/jobs/${job._id}`, job);
+// import { 
+//   get, 
+//   patch 
+// } from '../services/request';
+// const getJobById = id => get(`/api/v1/jobs/${id}`);
+// const updateJobById = job => patch(`/api/v1/jobs/${job._id}`, job);
 
-// const getJobById = () => {	
-//   return Promise.resolve(	
-//     {	
-//       title: 'a job',	
-//       company: 'TopNotch',	
-//       active: true,	
-//       jobDescriptionText: 'a job',	
-//       jobUrl: 'Job.job.com',	
-//       salary: '100k',	
-//       jobLocation: 'S Beaverton',	
-//       tracking: 'interested',	
-//       _id: '1',	
-//       date: '12/23/1989'	
-//     }	
-//   );	
-// };
+const getJobById = () => {	
+  return Promise.resolve(	
+    {	
+      title: 'a job',	
+      company: 'TopNotch',	
+      active: true,	
+      jobDescriptionText: 'a job',	
+      jobUrl: 'Job.job.com',	
+      salary: '100k',	
+      jobLocation: 'S Beaverton',	
+      tracking: 'interested',	
+      _id: '1',	
+      date: '12/23/1989'	
+    }	
+  );	
+};
+const updateJobById = () => {	
+  return Promise.resolve(	
+    {	
+      title: 'update',	
+      company: 'TopNotch',	
+      active: true,	
+      jobDescriptionText: 'a job',	
+      jobUrl: 'Job.job.com',	
+      salary: '100k',	
+      jobLocation: 'S Beaverton',	
+      tracking: 'interested',	
+      _id: '1',	
+      date: '12/23/1989'	
+    }	
+  );	
+};
 
 export const [
   fetchJobDetail,
