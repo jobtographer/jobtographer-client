@@ -62,7 +62,10 @@ export const Footer = styled.footer`
   justify-content: center;
   position: fixed;
   bottom: 0;
+  background: black;
   font-size: 1.25em;
   width: 100vw;
+  height: .45rem;
   padding: 1.25rem;
+  z-index: 6;
 `;
