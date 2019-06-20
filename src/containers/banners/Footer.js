@@ -1,21 +1,23 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 // import AboutUs from '../../components/AboutUs';
-import { GeneralFooter } from './bannerStyledComponents';
+import { Footer } from './bannerStyledComponents';
+import AboutUs from '../../components/AboutUs';
 
-class Footer extends Component {
+class FooterContainer extends Component {
   render() {
     return (
       <>
-        <GeneralFooter>
+        <Footer>
           <span>~ Footer here ~</span>
           <ul>
-            <li><a href="AboutUs">About Us</a></li>
+            <li><Link to={AboutUs}><a>About Us</a></Link></li>
           </ul>
 
-        </GeneralFooter>
+        </Footer>
       </>
     );
   }
 }
 
-export default Footer;
+export default FooterContainer;

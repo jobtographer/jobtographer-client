@@ -3,9 +3,9 @@ import AddJob from '../containers/AddJob';
 import AllJobs from '../containers/AllJobs';
 import NavBar from '../containers/banners/NavBar';
 import UserNav from '../containers/banners/UserNav';
-import Footer from '../containers/banners/Footer';
+// import Footer from '../containers/banners/Footer';
 import { AllJobsDisplay, StyledDashboard } from './dashboardStyledComponents';
-import { Footer } from '../containers/banners/bannerStyledComponents';
+import FooterContainer from '../containers/banners/Footer';
 
 export default function Dashboard() {
   return (
@@ -17,7 +17,7 @@ export default function Dashboard() {
       <AllJobsDisplay>
         <AllJobs />
       </AllJobsDisplay>
-      <Footer />
+      <FooterContainer />
     </StyledDashboard>
   </>
   );

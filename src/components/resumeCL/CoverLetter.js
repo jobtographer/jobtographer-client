@@ -1,14 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ClDiv } from './dashboardStyledComponents';
+import { ClDiv } from '../dashboardStyledComponents';
 
 function CoverLetter({ coverLetter }) {
   const { title, body } = coverLetter;
   return (
-    <ClDiv>
-      <h3>{title}</h3>
-      <p>{body}</p>
-    </ClDiv>
+    <>
+      <ClDiv>
+        <h3>{title}</h3>
+        <p>{body}</p>
+      </ClDiv>
+      <button>Delete CoverLetter</button>
+    </>
+
+
   );
 }
 

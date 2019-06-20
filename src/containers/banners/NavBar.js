@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import Jobs from '../AllJobs';
 import { GeneralNavBar, Li1, Li2 } from '../banners/bannerStyledComponents';
 
@@ -9,8 +10,8 @@ class NavBar extends Component {
       <>
         <GeneralNavBar >
           <ul>
-            <Li1><a href="/">Home</a></Li1>
-            <Li2><a href={Jobs}>Jobs</a></Li2>
+            <Li1><Link to={Jobs}><a>Jobs</a></Link></Li1>
+            <Li2><Link to={Jobs}><a>Jobs</a></Link></Li2>
           </ul>
           <img src='../../assets/Logo.png'></img>
         </GeneralNavBar>

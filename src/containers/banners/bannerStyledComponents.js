@@ -50,7 +50,7 @@ export const UserNavBar = styled.section`
   }
 `;
 
-export const GeneralFooter = styled.footer`
+export const Footer = styled.footer`
   display: flex;
   position: relative;
   top: 150px;
