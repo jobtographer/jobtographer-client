@@ -1,20 +1,18 @@
 import { createAction } from 'promise-middleware-redux';
-import { 
-  get,
-  post
-} from '../services/request';
-
-const getAssets = (query, value) => get(`/api/v1/assets?${query}=${value}`);
-const createAsset = asset => post('/ap1/v1/assets', asset);
+import { getResume, createAsset, getCoverLetters } from '../services/assetsApi';
 
 export const [
-  fetchAssets,
-  FETCH_ASSETS,
-  FETCH_ASSETS_PENDING
-] = createAction('FETCH_ASSETS', getAssets);
+  fetchResumes,
+] = createAction('FETCH_RESUME', getResume);
 
 export const [ 
-  newAsset, 
-  NEW_ASSET,
-  NEW_ASSET_PENDING
-] = createAction('NEW_ASSET', createAsset);
+  newResume, 
+] = createAction('NEW_RESUME', createAsset);
+
+export const [
+  fetchCoverLetters,
+] = createAction('FETCH_COVER_LETTER', getCoverLetters);
+
+export const [ 
+  newCoverLetter, 
+] = createAction('NEW_COVER_LETTER', createAsset);
