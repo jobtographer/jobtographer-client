@@ -30,28 +30,34 @@ export const AllJobsDisplay = styled.section`
   text-align: center;
 
   ul {
-    border: solid grey;
-    color: fuchsia;
-    width: 60vw;
-    height: auto;
-    padding: 1.25rem;
-    margin-top: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    text-align: center;
-    background: yellow;
+    overflow: scroll;
+    overflow-x: hidden;
+    height: 60vh;
+
+    padding: 1.25rem;
+    margin-top: 1rem;
+
   }
 
   li {
-    margin: 1rem;
-    background: orange;
-  }
+    border: solid black 4rem;
+    background-image: url('../../../assets/orange1.jpg');
+    clip-path: polygon(20% 10%, 100% 10%, 100% 90%, 20% 90%, 10% 50%);
+    
+    width: 60vw;
+    margin: -.5em 0 ;
 
+  }
+  
   p, h3 {
+    color: black;
+    font-size: 1.8em;
     display: inline-block;
-    margin-right: 1rem;
+    margin: 0 0 0 3rem;
   }
 `;
 

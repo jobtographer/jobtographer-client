@@ -6,6 +6,7 @@ export const GeneralNavBar = styled.section`
   justify-content: space-between;
   align-items: center;
   font-size: 2em;
+  color: white;
    a {
     color: white;
     font-size: .5em;
@@ -21,17 +22,41 @@ export const GeneralNavBar = styled.section`
   }
 `;
 
+export const WhiteBackground = styled.div`
+  background-image: url('../../../assets/white.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 25vw;
+  height: 25%;
+  transform: rotate(35deg) translate(-5rem);
+
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  z-index: -101;
+`;
+
 export const Li1 = styled.li`
+  margin: 1rem;
+  margin-left: 50px;
+  p {
+    color: white;
+  }
   a:hover {
     color: white;
   }
-  margin: 1rem;
-  margin-left: 50px;
-`;
+  `;
 
 export const Li2 = styled.li`
   margin: 1rem;
   margin-left: 50px;
+  color: white;
+  p {
+    color: white;
+  }
+  a:hover {
+    color: white;
+  }
 `;
 
 export const UserNavBar = styled.section`
