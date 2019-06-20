@@ -1,4 +1,3 @@
-import { NEW_ASSET, FETCH_ASSETS } from '../actions/constants';
 import { 
   NEW_RESUME, 
   NEW_COVER_LETTER, 
