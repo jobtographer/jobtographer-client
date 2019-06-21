@@ -8,6 +8,7 @@ import { withSession } from '../containers/auth/withSession';
 import Dashboard from './Dashboard';
 import Callback from '../containers/auth/Callback';
 import JobById from '../containers/JobById';
+import LandingPage from './landing/LandingPage';
 
 export default function App() {
 
@@ -16,6 +17,7 @@ export default function App() {
       <Switch>
         <Route exact path="/" component={withSession(Dashboard)} />
         {/* <Route exact path="/" component={Dashboard} /> */}
+        <Route path="/l" component={LandingPage} />
         <Route path="/callback" component={Callback} /> 
         {/* <Route path="/:id" component={JobById} /> */}
         <Route exact path="/:id" component={withSession(JobById)} />

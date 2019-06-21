@@ -1,11 +1,8 @@
 import React, { PureComponent } from 'react';
-import PropTypes from 'prop-types';
 import styles from './LandingPage.css';
-
-import logo from '../../../assets/logo.png';
+import logo from '../../../assets/lighthouse1.png';
 import landing from '../../../assets/landing.png';
 import leftContent from '../../../assets/leftContent.png';
-import rightContent from '../../../assets/rightContent.png';
 import arrowsblack from '../../../assets/arrowsblack.png';
 
 export default class LandingPage extends PureComponent {
@@ -19,11 +16,12 @@ export default class LandingPage extends PureComponent {
           <section>
             <img src={leftContent} />
           </section>
+          <span><img src='../../assets/skyline.jpg'></img></span>
           <Aside />
         </section>
 
         <section className={styles.section2}>
-          <img src={logo}></img>
+          <img style={{ width: '10em' }} src={logo}></img>
           <div>
             <h1>Let&#39;s get to work !</h1>
             <p>Workür is here to help with your job search. Track all your job hunts in one place. </p>

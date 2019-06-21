@@ -7,6 +7,16 @@ export const PageContainer = styled.div`
   margin: 0;
   `;
 
+export const BackgroundImage = styled.div`
+  width: 100vw;
+  height: 100vh;
+  background-image: url('../../../assets/white.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  z-index: -107;
+`;
+
 export const WhiteBackground = styled.div`
   background-image: url('../../../assets/white.png');
   background-size: cover;

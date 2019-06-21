@@ -9,13 +9,14 @@ function Job({ job, deleteJob }) {
   return (
     <Div>
       <Link to={`/${job._id}`}>
-        <h3 style={{ overflow: 'hidden',
-          textOverflow: 'ellipsis' }}>{title}</h3>
+        <h3>{title}</h3>
         <p>{company}</p>
         <p>{date.slice(0, 10)}</p>
         <p>status: {active ? 'active' : 'inactive'}</p>
       </Link>
-      <FaTrash size={17} style={{  }} onClick={() => deleteJob(job._id)} />
+      <div style={{ marginTop: '1.7rem' }}>
+        <FaTrash size={17} style={{ marginLeft: '0em',  }} onClick={() => deleteJob(job._id)} />
+      </div>
     </Div>
   );
 }

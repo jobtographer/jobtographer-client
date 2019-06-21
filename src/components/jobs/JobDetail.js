@@ -5,13 +5,15 @@ import {
   BackgroundDiv, Form, WhiteBackground,
   P, Input, DescriptionTextarea,
   TrackerSelect, H5, H1, ScrollForm,
-  Button
+  Button,
+  BackgroundImage
 } from './detailStyledComponents';
 import AllNotes from '../../containers/notes/AllNotes';
 import AddNote from '../../containers/notes/AddNote';
 import Footer from '../../containers/banners/Footer';
 import { UserNavBar } from '../../containers/banners/bannerStyledComponents';
 import NavBar from '../../containers/banners/NavBar';
+import { Title, Upsidedown } from '../dashboardStyledComponents';
 
 function JobDetail({ onChange, onSubmit, title, company, jobUrl, jobLocation, salary, jobDescriptionText, tracking,
 }) {
@@ -19,11 +21,17 @@ function JobDetail({ onChange, onSubmit, title, company, jobUrl, jobLocation, sa
   return (
     <>
     <WhiteBackground />
+    <BackgroundImage />
     <OrangeBackground />
+    <Upsidedown />
+    <Title>Workür</Title>
     <PageContainer>
       <NavBar />
       <BackgroundDiv>
-        <UserNavBar />
+        <UserNavBar>
+          <img src='../../../assets/userimage.jpg' />
+          <a href="/">Logout</a>
+        </UserNavBar>
         <Form onSubmit={onSubmit}>
           <H1>Overview for {title} </H1>
           <H5>(edit sections and click update to save changes)</H5>
