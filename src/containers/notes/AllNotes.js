@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Notes from '../../components/notes/Notes';
-import { fetchNotes } from '../../actions/notesActions';
+import { fetchNotes, removeNote } from '../../actions/notesActions';
 import { getNotesLoadingSelector, getNotesSelector } from '../../selectors/noteSelectors';
 import { withRouter } from 'react-router-dom';
 class AllNotes extends PureComponent {
@@ -10,7 +10,8 @@ class AllNotes extends PureComponent {
     notes: PropTypes.array.isRequired,
     loading: PropTypes.bool.isRequired,
     fetch: PropTypes.func.isRequired,
-    match: PropTypes.object.isRequired
+    match: PropTypes.object.isRequired,
+    delete: PropTypes.func.isRequired
   }
 
   componentDidMount() {
@@ -27,7 +28,7 @@ class AllNotes extends PureComponent {
     const { loading, notes } = this.props;
     if(loading) return <h1>loading...</h1>;
 
-    return <Notes notes={notes} />;
+    return <Notes notes={notes} deleteNote={this.props.delete} />;
   }
 }
 const mapStateToProps = state => ({
@@ -38,6 +39,9 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = (dispatch, { match }) => ({
   fetch() {
     dispatch(fetchNotes(match.params.id));
+  },
+  delete(noteId) {
+    dispatch(removeNote(noteId));
   }
 });
   

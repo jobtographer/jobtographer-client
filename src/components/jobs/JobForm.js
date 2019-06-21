@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { AddJobForm } from '../dashboardStyledComponents';
 
-function JobForm({ onChange, onSubmit, submitText, title, company, jobUrl, jobLocation, salary, jobDescriptionText, tracking, resume, coverLetter
+function JobForm({ onChange, onSubmit, submitText, title, company, jobUrl, jobLocation, salary, jobDescriptionText, tracking
 }) {
   return (
 
@@ -13,8 +13,6 @@ function JobForm({ onChange, onSubmit, submitText, title, company, jobUrl, jobLo
       <input placeholder='location' name="jobLocation" value={jobLocation} onChange={onChange} />
       <input placeholder='description' name="jobDescriptionText" value={jobDescriptionText} onChange={onChange} />
       <input placeholder='salary' name="salary" value={salary} onChange={onChange} />
-      <input placeholder='resume' name="resume" value={resume} onChange={onChange} />
-      <input placeholder='coverLetter' name="coverLetter" value={coverLetter} onChange={onChange} />
 
       <select value={tracking} name='tracking' onChange={onChange}>
         {/* <select defaultValue='DEFAULT' name='tracking' onChange={onChange}> */}
@@ -44,8 +42,6 @@ JobForm.propTypes = {
   salary: PropTypes.string,
   jobDescriptionText: PropTypes.string,
   tracking: PropTypes.string,
-  resume: PropTypes.string,
-  coverLetter: PropTypes.string
 };
 
 JobForm.defaultProps = {

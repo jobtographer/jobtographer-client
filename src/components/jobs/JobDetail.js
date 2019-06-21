@@ -13,7 +13,7 @@ import Footer from '../../containers/banners/Footer';
 import { UserNavBar } from '../../containers/banners/bannerStyledComponents';
 import NavBar from '../../containers/banners/NavBar';
 
-function JobDetail({ onChange, onSubmit, title, company, jobUrl, jobLocation, salary, jobDescriptionText, tracking, resume, coverLetter
+function JobDetail({ onChange, onSubmit, title, company, jobUrl, jobLocation, salary, jobDescriptionText, tracking,
 }) {
 
   return (
@@ -52,14 +52,6 @@ function JobDetail({ onChange, onSubmit, title, company, jobUrl, jobLocation, sa
               <Input placeholder={salary} name="salary" value={salary} onChange={onChange} />
             </P>
 
-            <P>Resume |
-              <Input placeholder={resume} name="resume" value={resume} onChange={onChange} />
-            </P>
-
-            <P>Cover Letter |
-              <Input placeholder={coverLetter} name="coverLetter" value={coverLetter} onChange={onChange} />
-            </P>
-        
             <P>Job Progress Tracker |
               <TrackerSelect defaultValue={tracking} name='tracking' onChange={onChange}>
                 <option value={tracking} disabled>{tracking}</option>

@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 import Note from './Note';
 import { AddNotesDiv, NoteUl, NoteLi, H2, ScrollForm  } from '../notes/notesStyledComponents';
 
-function Notes({ notes }) {
+function Notes({ notes, deleteNote }) {
   const noteList = notes.map(note => (
     <NoteLi key={note._id}>
-      <Note note={note} />
+      <Note note={note} deleteNote={deleteNote}  />
     </NoteLi>
   ));
   return (
@@ -23,7 +23,8 @@ function Notes({ notes }) {
 }
 
 Notes.propTypes = {
-  notes: PropTypes.arrayOf(PropTypes.object).isRequired
+  notes: PropTypes.arrayOf(PropTypes.object).isRequired,
+  deleteNote: PropTypes.func.isRequired
 };
 
 export default Notes;
