@@ -1,6 +1,20 @@
 import { fetchJobDetail, updateJobDetail } from './jobDetailActions';
+jest.mock('../services/auth.js', () => ({
+  login: () => {},
+  handleAuth: () => Promise.resolve(),
+}));
 
+jest.mock('../services/jobsApi.js', () => ({
+  getJobById() {
+    return Promise.resolve([]);
+  },
+  updateJobById() {
+    return Promise.resolve([]);
+  }
+})); 
 describe('JOB DETAIL ACTIONS', () => {
+
+
   it('creates an action to fetch the job detail', () => {
     const action = fetchJobDetail('1');
 

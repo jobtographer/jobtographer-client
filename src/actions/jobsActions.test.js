@@ -6,8 +6,11 @@ jest.mock('../services/jobsApi.js', () => ({
   },
   getJobs() {
     return Promise.resolve([]);
+  },
+  deleteJob() {
+    return Promise.resolve([]);
   }
-})); 
+}));
 
 describe('job actions', () => {
   it('creates an action to create a new job', () => {
