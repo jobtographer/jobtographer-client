@@ -20,15 +20,14 @@ class AllCoverLetters extends PureComponent {
     if(this.props.coverLetters !== prevProps.coverLetters.length) {
       this.props.fetch();
     }
-    
-    render() {
-      const { loading, coverLetter } = this.props;
-      if(loading) return <h1>loading...</h1>;
+  }
+  render() {
+    const { loading, coverLetters } = this.props;
+    if(loading) return <h1>loading...</h1>;
 
-      return (
-        <CoverLetters coverLetters={coverLetters} />
-      );
-    }
+    return (
+      <CoverLetters coverLetters={coverLetters} />
+    );
   }
 }
 
@@ -37,7 +36,7 @@ const mapStateToProps = state => ({
   loading: getAssetsLoading(state)
 });
 
-const mapDispatchToProps = state => ({
+const mapDispatchToProps = dispatch => ({
   fetch() {
     dispatch(fetchCoverLetters());
   }

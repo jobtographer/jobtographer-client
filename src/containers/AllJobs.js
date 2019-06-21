@@ -41,7 +41,6 @@ const mapDispatchToProps = (dispatch) => ({
     dispatch(fetchJobs());
   },
   delete(jobId) {
-    console.log('jobId', jobId);
     dispatch(removeJob(jobId));
   }
 });
