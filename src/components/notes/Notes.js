@@ -15,7 +15,6 @@ function Notes({ notes, deleteNote }) {
         <H2>Notes</H2>
         <ScrollForm>
           {noteList}
-          {noteList}
         </ScrollForm>
       </NoteUl>
     </AddNotesDiv>
