@@ -155,15 +155,3 @@ export const Button = styled.button`
     transform: scale(1.01);
   }
 `;
-
-export const ImageStripe = styled.div`
-  background-image: url("../../../assets/glow-hexagon-black-orange-white-gradient-1920x1080-c4-000000-ffffff-ff8c00-000000-l2-16-203-a-25-f-6.png");
-  background-position: center;
-  color: black;
-  width: 80vw;
-  height: 25vh;
-  position: fixed;
-  top: 40vh;
-  z-index: 1;
-  background: black;
-`;

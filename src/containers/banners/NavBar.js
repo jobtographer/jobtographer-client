@@ -10,7 +10,7 @@ class NavBar extends Component {
           <ul>
             <Li1><Link to="/"><p>Jobs</p></Link></Li1>
           </ul>
-          <img src='../../assets/Logo.png'></img>
+          <img src='../../assets/logocrop.png'></img>
         </GeneralNavBar>
       </>
     );

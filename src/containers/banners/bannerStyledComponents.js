@@ -14,10 +14,9 @@ export const GeneralNavBar = styled.section`
   }
 
   img {
-    border: solid orange .25rem;
     width: 150px;
     height: auto;
-    border-radius: 50%;
+    clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
     margin-right: 50px;
   }
 `;
@@ -34,6 +33,18 @@ export const WhiteBackground = styled.div`
   padding: 0;
   position: absolute;
   z-index: -101;
+`;
+export const Splatter = styled.div`
+  background-image: url('../../../assets/splatter1.jpg');
+
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  z-index: -110;
 `;
 
 export const Li1 = styled.li`
@@ -70,7 +81,7 @@ export const UserNavBar = styled.section`
   background: black;
   clip-path: polygon(0% 0%, 100% 20%, 100% 100%, 0% 100%);
   width: 4rem;
-  height: 50vh;
+  height: 60vh;
 
   img {
     width: 2.5rem;
