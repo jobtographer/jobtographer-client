@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react';
+import { Link } from 'react-router-dom';
 import styles from './LandingPage.css';
 import logo from '../../../assets/lighthouse1.png';
 import landing from '../../../assets/landing.png';
@@ -25,7 +26,7 @@ export default class LandingPage extends PureComponent {
           <div>
             <h1>Let&#39;s get to work !</h1>
             <p>Workür is here to help with your job search. Track all your job hunts in one place. </p>
-            <button>Login</button>
+            <Link to="/dashboard"><button>Login</button></Link>
           </div>
           <img src={arrowsblack} className={styles.arrowsblack} />
         </section>

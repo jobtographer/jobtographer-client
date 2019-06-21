@@ -30,7 +30,7 @@ function JobDetail({ onChange, onSubmit, title, company, jobUrl, jobLocation, sa
       <BackgroundDiv>
         <UserNavBar>
           <img src='../../../assets/userimage.jpg' />
-          <a href="/">Logout</a>
+          <a href="/dashboard">Logout</a>
         </UserNavBar>
         <Form onSubmit={onSubmit}>
           <H1>Overview for {title} </H1>
