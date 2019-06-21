@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import concrete1 from '../../../assets/concrete1.jpg';
 
 
 export const NoteFormCSS = styled.form`
@@ -6,7 +7,7 @@ export const NoteFormCSS = styled.form`
   justify-content: center;
   flex-direction: column;
 
-  background-image: url("../../../assets/concrete1.jpg");
+  background-image: url(${concrete1});
   width: 25vw;
   border: .1rem solid black;
   border-radius: .3rem;
@@ -79,7 +80,7 @@ export const AddNotesDiv = styled.div`
   height: 28vh;
   padding: 1em;
   margin: .5rem;
-  background-image: url("../../../assets/concrete1.jpg");
+  background-image: url(${concrete1});
   overflow-y: scroll;
   display: flex;
   justify-content: center;

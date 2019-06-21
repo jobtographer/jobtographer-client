@@ -14,6 +14,7 @@ import Footer from '../../containers/banners/Footer';
 import { UserNavBar } from '../../containers/banners/bannerStyledComponents';
 import NavBar from '../../containers/banners/NavBar';
 import { Title, Upsidedown } from '../dashboardStyledComponents';
+import userimage from '../../../assets/userimage.jpg';
 
 function JobDetail({ onChange, onSubmit, title, company, jobUrl, jobLocation, salary, jobDescriptionText, tracking,
 }) {
@@ -29,7 +30,7 @@ function JobDetail({ onChange, onSubmit, title, company, jobUrl, jobLocation, sa
       <NavBar />
       <BackgroundDiv>
         <UserNavBar>
-          <img src='../../../assets/userimage.jpg' />
+          <img src={userimage} />
           <a href="/dashboard">Logout</a>
         </UserNavBar>
         <Form onSubmit={onSubmit}>

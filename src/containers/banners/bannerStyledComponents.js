@@ -1,4 +1,7 @@
 import styled from 'styled-components';
+import white1 from '../../../assets/white.png';
+import white2 from '../../../assets/white.jpg';
+import orange1 from '../../../assets/orange1.jpg';
 
 export const GeneralNavBar = styled.section`
   width: 100vw;
@@ -29,7 +32,7 @@ export const GeneralNavBar = styled.section`
 `;
 
 export const WhiteBackground = styled.div`
-  background-image: url('../../../assets/white.png');
+  background-image: url(${white1});
   background-size: cover;
   background-repeat: no-repeat;
   width: 25vw;
@@ -42,7 +45,7 @@ export const WhiteBackground = styled.div`
   z-index: -105;
 `;
 export const Splatter = styled.div`
-  background-image: url('../../../assets/white.jpg');
+  background-image: url(${white2});
   background-size: cover;
   background-repeat: no-repeat;
   width: 100vw;
@@ -94,7 +97,7 @@ export const UserNavBar = styled.section`
 `;
 
 export const FooterImage = styled.footer`
-  background-image: url('../../../assets/orange1.jpg');
+  background-image: url(${orange1});
   background-repeat: no-repeat;
   background-size: cover;
   position: fixed;

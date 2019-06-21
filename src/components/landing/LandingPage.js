@@ -5,6 +5,7 @@ import logo from '../../../assets/lighthouse1.png';
 import landing from '../../../assets/landing.png';
 import leftContent from '../../../assets/leftContent1.png';
 import arrowsblack from '../../../assets/arrowsblack.png';
+import skyline from '../../../assets/skyline.jpg';
 
 export default class LandingPage extends PureComponent {
 
@@ -17,7 +18,7 @@ export default class LandingPage extends PureComponent {
           <section>
             <img src={leftContent} />
           </section>
-          <span><img src='../../assets/skyline.jpg'></img></span>
+          <span><img src={skyline}></img></span>
           <Aside />
         </section>
 

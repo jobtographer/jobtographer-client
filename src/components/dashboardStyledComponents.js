@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import upsidedown from '../../assets/upsidedown.png';
+import orange1 from '../../assets/orange1.jpg';
 
 export const StyledDashboard = styled.section`
   ul {
@@ -13,7 +15,7 @@ export const StyledDashboard = styled.section`
 `;
 
 export const Upsidedown = styled.section`
-  background-image: url('../../../assets/upsidedown.png');
+  background-image: url(${upsidedown});
   background-repeat: repeat-x;
   background-position: -20rem;
   position: absolute;
@@ -95,7 +97,7 @@ export const AllJobsDisplay = styled.section`
 
   li {
     border: solid black 4rem;
-    background-image: url('../../../assets/orange1.jpg');
+    background-image: url(${orange1});
     clip-path: polygon(20% 10%, 100% 10%, 100% 90%, 20% 90%, 10% 50%);
     box-shadow: 50px 50px 58px black;
     width: 60vw;

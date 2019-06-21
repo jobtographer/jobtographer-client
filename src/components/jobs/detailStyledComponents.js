@@ -1,4 +1,8 @@
 import styled from 'styled-components';
+import white1 from '../../../assets/white.jpg';
+import white2 from '../../../assets/white.png';
+import orange1 from '../../../assets/orange1.jpg';
+import concrete1 from '../../../assets/concrete1.jpg';
 
 export const PageContainer = styled.div`
   width: 100vw;
@@ -10,7 +14,7 @@ export const PageContainer = styled.div`
 export const BackgroundImage = styled.div`
   width: 100vw;
   height: 100vh;
-  background-image: url('../../../assets/white.jpg');
+  background-image: url(${white1});
   background-size: cover;
   background-repeat: no-repeat;
   position: absolute;
@@ -18,7 +22,7 @@ export const BackgroundImage = styled.div`
 `;
 
 export const WhiteBackground = styled.div`
-  background-image: url('../../../assets/white.png');
+  background-image: url(${white2});
   background-size: cover;
   background-repeat: no-repeat;
   width: 25vw;
@@ -31,7 +35,7 @@ export const WhiteBackground = styled.div`
   z-index: -101;
 `;
 export const OrangeBackground = styled.div`
-  background-image: url('../../../assets/orange1.jpg');
+  background-image: url(${orange1});
   background-size: cover;
   background-repeat: no-repeat;
   clip-path: polygon(110% 0, 100% 100%, 0% 100%, 0 160%);
@@ -50,7 +54,7 @@ export const BackgroundDiv = styled.div`
 `;
 
 export const Form = styled.form`
-  background-image: url("../../../assets/concrete1.jpg");
+  background-image: url(${concrete1});
   width: 35vw;
   height: 60.5vh;
   border-radius: .3rem;
