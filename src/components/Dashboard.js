@@ -6,12 +6,13 @@ import UserNav from '../containers/banners/UserNav';
 // import Footer from '../containers/banners/Footer';
 import { AllJobsDisplay, StyledDashboard } from './dashboardStyledComponents';
 import FooterContainer from '../containers/banners/Footer';
-import { WhiteBackground } from '../containers/banners/bannerStyledComponents';
+import { WhiteBackground, Splatter } from '../containers/banners/bannerStyledComponents';
 
 export default function Dashboard() {
   return (
   <>
     <WhiteBackground />
+    <Splatter />
     <StyledDashboard>
       <NavBar />
       <UserNav />

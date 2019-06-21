@@ -16,10 +16,16 @@ export const AddJobForm = styled.form`
   display: flex;
   justify-content: center;
   overflow: hidden;
-  width: 80vw;
+
   padding: 1.25rem;
-  margin-left: 15rem;
+
   margin-top: 2rem;
+  input {
+    margin: 0 .1rem;
+  }
+  button {
+    margin: 0 .1rem;
+  }
 `;
 
 export const AllJobsDisplay = styled.section`
@@ -57,7 +63,10 @@ export const AllJobsDisplay = styled.section`
     color: black;
     font-size: 1.8em;
     display: inline-block;
-    margin: 0 0 0 3rem;
+    margin: 0 0 0 0rem;
+    width: 14.5rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 `;
 
