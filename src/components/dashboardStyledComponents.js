@@ -28,6 +28,13 @@ export const AddJobForm = styled.form`
   }
 `;
 
+export const Div = styled.section`
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+`;
+
 export const AllJobsDisplay = styled.section`
   width: 100vw;
   display: flex;
@@ -68,12 +75,4 @@ export const AllJobsDisplay = styled.section`
     overflow: hidden;
     text-overflow: ellipsis;
   }
-`;
-
-export const AboutUsDisplay = styled.section`
-
-`;
-
-export const ClDiv = styled.div`
-
 `;

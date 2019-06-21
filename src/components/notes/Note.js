@@ -9,7 +9,7 @@ function Note({ note, deleteNote }) {
     <NoteDiv>
       <h3>{title}</h3>
       <p>{body}</p>
-      <FaTrash size={25} style={{ paddingLeft: '10px' }} onClick={() => deleteNote(note._id)}/>
+      <FaTrash size={17} style={{ alignSelf: 'flex-start' }} onClick={() => deleteNote(note._id)}/>
     </NoteDiv>
   );
 }

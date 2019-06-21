@@ -47,9 +47,7 @@ export const Splatter = styled.div`
   z-index: -110;
 `;
 
-export const Li1 = styled.li`
-  margin: 1rem;
-  margin-left: 50px;
+export const Li1 = styled.p`
   p {
     color: white;
   }
@@ -57,18 +55,6 @@ export const Li1 = styled.li`
     color: white;
   }
   `;
-
-export const Li2 = styled.li`
-  margin: 1rem;
-  margin-left: 50px;
-  color: white;
-  p {
-    color: white;
-  }
-  a:hover {
-    color: white;
-  }
-`;
 
 export const UserNavBar = styled.section`
   display: flex;
@@ -94,17 +80,17 @@ export const UserNavBar = styled.section`
     margin-bottom: 1rem;
     text-decoration: none;
     :hover { color: red; }
-  }	
+  } 
 `;
 
 export const Footer = styled.footer`
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
   position: fixed;
   bottom: 0;
   font-size: 1.25em;
   width: 100vw;
   height: .45rem;
-  padding: 1.25rem;
-  z-index: 6;
 `;

@@ -42,7 +42,7 @@ export const BackgroundDiv = styled.div`
 export const Form = styled.form`
   background-image: url("../../../assets/concrete1.jpg");
   width: 35vw;
-  height: 61vh;
+  height: 62.2vh;
   border-radius: .3rem;
   border: .1rem solid;
   margin: .5rem;
@@ -50,7 +50,7 @@ export const Form = styled.form`
 `;
 
 export const ScrollForm  = styled.div`
-  height: 85%;
+  height: 82.8%;
   width: 100%;
   overflow: scroll;
   margin-bottom: .3rem;

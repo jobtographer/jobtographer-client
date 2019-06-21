@@ -6,7 +6,7 @@ class NavBar extends Component {
   render() {
     return (
       <>
-        <UserNavBar id="user-navigationBar">
+        <UserNavBar>
           <img src='../../../assets/userimage.jpg' />
           <a href="/">Logout</a>
         </UserNavBar>
