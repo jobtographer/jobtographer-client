@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import styles from './LandingPage.css';
 import logo from '../../../assets/lighthouse1.png';
 import landing from '../../../assets/landing.png';
-import leftContent from '../../../assets/leftContent.png';
+import leftContent from '../../../assets/leftContent1.png';
 import arrowsblack from '../../../assets/arrowsblack.png';
 
 export default class LandingPage extends PureComponent {

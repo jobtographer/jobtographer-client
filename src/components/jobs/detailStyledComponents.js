@@ -52,7 +52,7 @@ export const BackgroundDiv = styled.div`
 export const Form = styled.form`
   background-image: url("../../../assets/concrete1.jpg");
   width: 35vw;
-  height: 62.2vh;
+  height: 61.6vh;
   border-radius: .3rem;
   border: .1rem solid;
   margin: .5rem;
@@ -164,4 +164,26 @@ export const Button = styled.button`
     opacity: .7;
     transform: scale(1.01);
   }
+`;
+
+export const LoadSpinner = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  img {
+    width: 13rem;
+  }
+  animation: spin 2s linear infinite;
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
 `;

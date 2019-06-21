@@ -34,11 +34,13 @@
 
    } 
   section img {
-    width: 30em;
+    width: 28.5vw;
   }
 
   span img {
     position: absolute;
+    width: 50vw;
+    height: 75vh;
     z-index: -5;
     bottom: -22.5rem;
 

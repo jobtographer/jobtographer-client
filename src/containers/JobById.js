@@ -5,6 +5,8 @@ import { withRouter } from 'react-router-dom';
 import { getJobDetail, getJobDetailLoading } from '../selectors/jobDetailSelectors';
 import { fetchJobDetail } from '../actions/jobDetailActions';
 import EditJob from './EditJob';
+import loadingImg from '../../assets/loading1.png';
+import { LoadSpinner } from '../components/jobs/detailStyledComponents';
 
 class JobById extends PureComponent {
   static propTypes = {
@@ -18,9 +20,8 @@ class JobById extends PureComponent {
   }
 
   render() {
-    console.log('JobById', this.props.job);
     const { loading } = this.props;
-    if(loading) return <h1>Loading...</h1>;
+    if(loading) return <LoadSpinner><img src={loadingImg} /></LoadSpinner>;
 
     return <EditJob  />;
   }

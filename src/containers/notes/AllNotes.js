@@ -5,6 +5,7 @@ import Notes from '../../components/notes/Notes';
 import { fetchNotes, removeNote } from '../../actions/notesActions';
 import { getNotesLoadingSelector, getNotesSelector } from '../../selectors/noteSelectors';
 import { withRouter } from 'react-router-dom';
+
 class AllNotes extends PureComponent {
   static propTypes = {
     notes: PropTypes.array.isRequired,
@@ -26,7 +27,7 @@ class AllNotes extends PureComponent {
 
   render() {
     const { loading, notes } = this.props;
-    if(loading) return <h1>loading...</h1>;
+    if(loading) return <h1>...loading</h1>;
 
     return <Notes notes={notes} deleteNote={this.props.delete} />;
   }
