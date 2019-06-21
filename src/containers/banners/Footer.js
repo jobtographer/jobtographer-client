@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 // import AboutUs from '../../components/AboutUs';
 import { Footer } from './bannerStyledComponents';
-import AboutUs from '../../components/AboutUs';
 
 class FooterContainer extends Component {
   render() {
