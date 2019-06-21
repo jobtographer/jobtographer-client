@@ -52,7 +52,7 @@ export const BackgroundDiv = styled.div`
 export const Form = styled.form`
   background-image: url("../../../assets/concrete1.jpg");
   width: 35vw;
-  height: 61.6vh;
+  height: 60.5vh;
   border-radius: .3rem;
   border: .1rem solid;
   margin: .5rem;
