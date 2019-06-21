@@ -3,7 +3,8 @@
   height: 100vh;
   overflow: hidden;
   display: flex;
-  position: fixed;
+  position: fixed;  
+  animation: fade 1s;
 }
 
  .leftLogo {
@@ -33,7 +34,11 @@
     justify-content: flex-end;
 
    } 
-  section img {
+  section {
+  animation: fade 4s;
+}
+section img {
+    animation: fade 3s;
     width: 28.5vw;
     height: 90%;
   }
@@ -78,6 +83,7 @@
       margin: 4rem;
       position: absolute;
       top: 10rem;
+      animation: fade 3s;
     }
 
      p {
@@ -132,3 +138,12 @@
   width: 500px;
 
  }
+
+ @keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
