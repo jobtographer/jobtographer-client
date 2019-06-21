@@ -2,19 +2,22 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { FaTrash } from 'react-icons/fa';
+import { Div } from '../dashboardStyledComponents';
 
 function Job({ job, deleteJob }) {
   const { title, date, company, active } = job;
   return (
-    <>
-    <Link to={`/${job._id}`}>
-      <h3>{title}</h3>
-      <p>{company}</p>
-      <p>{date.slice(0, 10)}</p>
-      <p>status: {active ? 'active' : 'inactive'}</p>
-    </Link>
-    <FaTrash size={25} style={{ paddingLeft: '10px' }} onClick={() => deleteJob(job._id)} />
-    </>
+    <Div>
+      <Link to={`/${job._id}`}>
+        <h3>{title}</h3>
+        <p>{company}</p>
+        <p>{date.slice(0, 10)}</p>
+        <p>status: {active ? 'active' : 'inactive'}</p>
+      </Link>
+      <div style={{ marginTop: '1.7rem' }}>
+        <FaTrash size={17} style={{ marginLeft: '0em',  }} onClick={() => deleteJob(job._id)} />
+      </div>
+    </Div>
   );
 }
 Job.propTypes = {

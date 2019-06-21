@@ -1,6 +1,22 @@
 * {
   margin: 0;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  animation: fade .5s;
+}
+::selection {
+  color: rgb(255, 255, 255);
+  background: black;
+}
+body {
+  animation: fade .5s;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 h6 {

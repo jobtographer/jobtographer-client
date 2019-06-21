@@ -7,10 +7,10 @@ class NavBar extends Component {
     return (
       <>
         <GeneralNavBar >
-          <ul>
-            <Li1><Link to="/"><p>Jobs</p></Link></Li1>
-          </ul>
-          <img src='../../assets/logocrop.png'></img>
+          <Li1><Link to="/dashboard">
+            <p>Jobs</p>
+          </Link></Li1>
+          <img src='../../assets/lighthouse1.png'></img>
         </GeneralNavBar>
       </>
     );

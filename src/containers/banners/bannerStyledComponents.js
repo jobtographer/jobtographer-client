@@ -7,17 +7,24 @@ export const GeneralNavBar = styled.section`
   align-items: center;
   font-size: 2em;
   color: white;
+
    a {
+    font-family: 'Coda Caption', sans-serif;
+    position: absolute;
+    top: 2rem;
+    left: 3.1rem;
     color: white;
-    font-size: .5em;
+    text-shadow: 2px 2px 4px #000000;
+    font-size: 1.1em;
     text-decoration: none;
+    
   }
 
   img {
     width: 150px;
     height: auto;
     clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
-    margin-right: 50px;
+    margin-right: 0rem;
   }
 `;
 
@@ -32,11 +39,11 @@ export const WhiteBackground = styled.div`
   margin: 0;
   padding: 0;
   position: absolute;
-  z-index: -101;
+  z-index: -105;
 `;
 export const Splatter = styled.div`
-  background-image: url('../../../assets/splatter1.jpg');
-
+  background-image: url('../../../assets/white.jpg');
+  background-size: cover;
   background-repeat: no-repeat;
   width: 100vw;
   height: 100vh;
@@ -47,9 +54,7 @@ export const Splatter = styled.div`
   z-index: -110;
 `;
 
-export const Li1 = styled.li`
-  margin: 1rem;
-  margin-left: 50px;
+export const Li1 = styled.p`
   p {
     color: white;
   }
@@ -57,18 +62,6 @@ export const Li1 = styled.li`
     color: white;
   }
   `;
-
-export const Li2 = styled.li`
-  margin: 1rem;
-  margin-left: 50px;
-  color: white;
-  p {
-    color: white;
-  }
-  a:hover {
-    color: white;
-  }
-`;
 
 export const UserNavBar = styled.section`
   display: flex;
@@ -93,18 +86,40 @@ export const UserNavBar = styled.section`
     color: white;
     margin-bottom: 1rem;
     text-decoration: none;
-    :hover { color: red; }
-  }	
+    transition: .7s;
+    :hover { 
+      color: orange; 
+    }
+  }
+`;
+
+export const FooterImage = styled.footer`
+  background-image: url('../../../assets/orange1.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  clip-path: polygon(100% 0, 0 0, 100% 100%);
+  width: 16rem;
+  height: 16rem;
 `;
 
 export const Footer = styled.footer`
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
   position: fixed;
   bottom: 0;
   font-size: 1.25em;
   width: 100vw;
   height: .45rem;
-  padding: 1.25rem;
-  z-index: 6;
+  a {
+    font-family: 'Sorts Mill Goudy', serif;
+    text-decoration: none;
+    color: black;
+    margin: 0rem .5rem 0.1rem .5rem;
+  }
 `;

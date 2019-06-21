@@ -12,7 +12,7 @@ class Callback extends PureComponent {
     this.props.handleAuth();
   }
   render() {
-    return <h1>loading image...</h1>;
+    return <h1></h1>;
   }
 }
 
@@ -21,7 +21,7 @@ const mapDispatchToProps = (dispatch, props) => ({
     const action = setSession();
     dispatch(action);
     action.payload.then(() => {
-      props.history.push('/');
+      props.history.push('/dashboard');
     });
   }
 });

@@ -1,23 +1,25 @@
 .LandingPage {
-  box-sizing: border-box;
   width: 100vw;
   height: 100vh;
+  overflow: hidden;
   display: flex;
+  position: fixed;
 }
 
  .leftLogo {
   position: absolute;
-  width: 7rem;
+  margin: -.2rem -2.5rem;
+  width: 14rem;
 }
 
  .section1 {
   box-sizing: border-box;
   width: 50vw;
-  background: white;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
-
+  
    section {
     box-sizing: border-box;
     height: 55vh;
@@ -25,22 +27,30 @@
     background: black;
     border-radius: 10px 0px 0px 10px;
 
-     display: flex;
+    display: flex;
     align-self: flex-end;
     align-items: center;
     justify-content: flex-end;
 
    } 
   section img {
+    width: 30em;
+  }
 
-     width: 30em;
+  span img {
+    position: absolute;
+    z-index: -5;
+    bottom: -22.5rem;
+
   }
 
  }
 .section2 {
   box-sizing: border-box;
   width: 50vw;
-  background: orange;
+  background-image: url('../../../assets/orange1.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
 
    img {
     width: 7.5rem;
@@ -53,32 +63,38 @@
     position: absolute;
     bottom: 0;
 
-
     display: flex;
     flex-direction: column;
-    align-self: center;
-    align-items: center;
     justify-content: center;
-
-     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-
-     h1 {
+    
+    h1 {
+      font-family: 'Coda Caption', sans-serif;
+      color: white;
+      text-shadow: 2px 2px 4px #000000;
       font-size: 3em;
-      margin: 1rem;
+      margin: 4rem;
+      position: absolute;
+      top: 10rem;
     }
 
      p {
-      font-size: 1.5em;
-      margin: 1rem 0 8rem 0;
+      font-family: 'Righteous', cursive;
+      font-size: 1.7em;
+      margin: 8rem 0rem 5rem 28rem;
       width: 20rem;
     }
-
-     button {
+    
+    button {
+      font-family: 'Coda Caption', sans-serif;
       background: rgba(0, 0, 0, 0.221);
       padding: .1em 1em;
       border: solid black;
       font-size: 2.3em;
       border-radius: 5px;
+      margin-left: 10rem;
+      width: 6em;
+      text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.125);
+      box-shadow: 3px 8px 8px black;
     }
 
      button:hover {

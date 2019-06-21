@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-// import AboutUs from '../../components/AboutUs';
 import { Footer } from './bannerStyledComponents';
 
 class FooterContainer extends Component {
@@ -8,10 +7,10 @@ class FooterContainer extends Component {
     return (
       <>
         <Footer>
-          <span>~ Footer here ~</span>
-          <ul>
-            <li><Link to={'/aboutUs'}>About Us</Link></li>
-          </ul>
+          <Link to={'/aboutUs'}>Contact</Link>
+          <Link to={'/aboutUs'}>Glassdoor</Link>
+          <Link to={'/aboutUs'}>Indeed</Link>
+          <Link to={'/aboutUs'}>About Us</Link>
         </Footer>
       </>
     );
