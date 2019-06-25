@@ -4,3 +4,6 @@ font-family: 'Righteous', cursive;
 font-family: 'Coda Caption', sans-serif;
 font-family: 'Sorts Mill Goudy', serif;
 font-family: 'Fira Sans', sans-serif;
+
+<Route exact path="/" component={Dashboard} />
+<Route path="/:id" component={JobById} />

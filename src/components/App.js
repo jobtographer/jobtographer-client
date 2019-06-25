@@ -17,9 +17,7 @@ export default function App() {
       <Switch>
         <Route exact path="/" component={LandingPage} />
         <Route path="/dashboard" component={withSession(Dashboard)} />
-        {/* <Route exact path="/" component={Dashboard} /> */}
         <Route path="/callback" component={Callback} /> 
-        {/* <Route path="/:id" component={JobById} /> */}
         <Route exact path="/:id" component={withSession(JobById)} />
       </Switch>
     </Router>
